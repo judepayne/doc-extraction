@@ -1,0 +1,92 @@
+# Project-local validation business configuration for doc-extraction.
+# This is intentionally local to this repository: the facility/deal schemas and
+# rules are specific to this document-extraction project, not the generic
+# validation-logic example repository.
+
+structural_files:
+  - rules/base.py
+  - entity_helpers/__init__.py
+  - entity_helpers/version_registry.py
+  - entity_helpers/read.py
+  - entity_helpers/conversions.py
+  - entity_helpers/write.py
+  - entity_helpers/convert.py
+  - schema_helpers/__init__.py
+  - schema_helpers/schema_loader.py
+
+rulesets:
+  facility:
+    metadata:
+      description: "Facility extraction validation"
+      purpose: "Validate JSON extracted from a facility-level loan document"
+      author: "doc-extraction"
+      date: "2026-04-26"
+    rules:
+      "https://raw.githubusercontent.com/judepayne/doc-extraction/main/validation/models/facility.schema.v1.0.0.json":
+        - rule_id: rule_facility_001_v1
+          children:
+            - rule_id: rule_facility_002_v1
+            - rule_id: rule_facility_003_v1
+            - rule_id: rule_facility_004_v1
+            - rule_id: rule_facility_005_v1
+            - rule_id: rule_facility_006_v1
+            - rule_id: rule_facility_007_v1
+            - rule_id: rule_facility_008_v1
+            - rule_id: rule_facility_009_v1
+            - rule_id: rule_facility_010_v1
+      facility:
+        - rule_id: rule_facility_001_v1
+          children:
+            - rule_id: rule_facility_002_v1
+            - rule_id: rule_facility_003_v1
+            - rule_id: rule_facility_004_v1
+            - rule_id: rule_facility_005_v1
+            - rule_id: rule_facility_006_v1
+            - rule_id: rule_facility_007_v1
+            - rule_id: rule_facility_008_v1
+            - rule_id: rule_facility_009_v1
+            - rule_id: rule_facility_010_v1
+
+  deal:
+    metadata:
+      description: "Deal extraction validation"
+      purpose: "Validate JSON extracted from a deal-level multi-facility loan document"
+      author: "doc-extraction"
+      date: "2026-04-26"
+    rules:
+      "https://raw.githubusercontent.com/judepayne/doc-extraction/main/validation/models/deal.schema.v1.0.0.json":
+        - rule_id: rule_deal_001_v1
+          children:
+            - rule_id: rule_deal_002_v1
+            - rule_id: rule_deal_003_v1
+            - rule_id: rule_deal_004_v1
+            - rule_id: rule_deal_005_v1
+            - rule_id: rule_deal_006_v1
+            - rule_id: rule_deal_007_v1
+            - rule_id: rule_deal_008_v1
+            - rule_id: rule_deal_009_v1
+            - rule_id: rule_deal_010_v1
+      deal:
+        - rule_id: rule_deal_001_v1
+          children:
+            - rule_id: rule_deal_002_v1
+            - rule_id: rule_deal_003_v1
+            - rule_id: rule_deal_004_v1
+            - rule_id: rule_deal_005_v1
+            - rule_id: rule_deal_006_v1
+            - rule_id: rule_deal_007_v1
+            - rule_id: rule_deal_008_v1
+            - rule_id: rule_deal_009_v1
+            - rule_id: rule_deal_010_v1
+
+schema_to_helper_mapping:
+  "https://raw.githubusercontent.com/judepayne/doc-extraction/main/validation/models/facility.schema.v1.0.0.json": "facility_v1"
+  "https://raw.githubusercontent.com/judepayne/doc-extraction/main/validation/models/deal.schema.v1.0.0.json": "deal_v1"
+
+default_helpers:
+  facility: "facility_v1"
+  deal: "deal_v1"
+
+version_compatibility:
+  allow_minor_version_fallback: true
+  strict_major_version: true

@@ -1,0 +1,2693 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/judepayne/doc-extraction/main/validation/models/facility.schema.v1.0.0.json",
+  "title": "Generic commercial loan facility schema",
+  "description": "Version 1.0.0 generic schema for a single facility-level commercial loan document. The schema deliberately separates a required normalised core from optional concern-specific blocks so that bilateral facilities, term sheets and facility amendments can share a comparable shape without losing legally material detail.",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schema_version",
+    "document_level",
+    "core"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://raw.githubusercontent.com/judepayne/doc-extraction/main/validation/models/facility.schema.v1.0.0.json"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "document_level": {
+      "const": "facility"
+    },
+    "core": {
+      "$ref": "#/$defs/facility_core"
+    },
+    "optional_blocks": {
+      "$ref": "#/$defs/facility_optional_blocks"
+    },
+    "source_trace": {
+      "$ref": "#/$defs/source_trace"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "non_empty_string": {
+      "type": "string",
+      "minLength": 1
+    },
+    "date_string": {
+      "type": "string",
+      "format": "date"
+    },
+    "currency_code": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "ISO 4217 currency code."
+    },
+    "money_amount": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "non_negative_amount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "percentage": {
+      "type": "number",
+      "description": "Percentage expressed as a percent, not a decimal fraction; for example 5.25 means 5.25%."
+    },
+    "source_ref": {
+      "type": "object",
+      "description": "Optional evidence pointer back to the source document.",
+      "properties": {
+        "location_type": {
+          "type": "string",
+          "enum": [
+            "clause",
+            "schedule",
+            "section",
+            "definition",
+            "recital",
+            "page",
+            "table",
+            "signature_block",
+            "other"
+          ]
+        },
+        "reference": {
+          "type": "string",
+          "description": "Clause, schedule, section or page reference, preserving document notation where possible."
+        },
+        "title": {
+          "type": "string",
+          "description": "Parenthetical or heading title, if present in the document."
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "quote": {
+          "type": "string",
+          "description": "Short supporting quotation from the source."
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/source_ref"
+      }
+    },
+    "party": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "legal_name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "description": "Role as stated in the document, e.g. Borrower, Lender, Agent, Guarantor."
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "party_type": {
+          "type": "string",
+          "enum": [
+            "company",
+            "fund",
+            "government_or_public_body",
+            "partnership",
+            "trust",
+            "individual",
+            "bank_or_financial_institution",
+            "other"
+          ]
+        },
+        "jurisdiction": {
+          "type": "string",
+          "description": "Jurisdiction of incorporation, organisation or establishment."
+        },
+        "registered_number": {
+          "type": "string"
+        },
+        "company_number": {
+          "type": "string"
+        },
+        "identifiers": {
+          "type": "object",
+          "properties": {
+            "acn": {
+              "type": "string",
+              "description": "Australian Company Number."
+            },
+            "abn": {
+              "type": "string",
+              "description": "Australian Business Number."
+            },
+            "tax_id": {
+              "type": "string"
+            },
+            "lei": {
+              "type": "string"
+            },
+            "company_house_number": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "registered_office": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "capacity": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "is_fund": {
+          "type": "boolean"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "facility_type": {
+      "type": "string",
+      "enum": [
+        "term_loan",
+        "revolving_credit",
+        "working_capital",
+        "bridge_facility",
+        "delayed_draw_term_loan",
+        "capex_facility",
+        "acquisition_facility",
+        "letter_of_credit",
+        "swingline",
+        "overdraft",
+        "bonding_or_guarantee_facility",
+        "other"
+      ]
+    },
+    "facility_core": {
+      "type": "object",
+      "required": [
+        "document",
+        "parties",
+        "facility",
+        "legal"
+      ],
+      "properties": {
+        "document": {
+          "$ref": "#/$defs/document_core"
+        },
+        "parties": {
+          "$ref": "#/$defs/parties_core"
+        },
+        "facility": {
+          "$ref": "#/$defs/single_facility_core"
+        },
+        "legal": {
+          "$ref": "#/$defs/legal_core"
+        }
+      },
+      "additionalProperties": false
+    },
+    "document_core": {
+      "type": "object",
+      "required": [
+        "document_type"
+      ],
+      "properties": {
+        "document_type": {
+          "type": "string",
+          "enum": [
+            "facility_agreement",
+            "loan_facility_term_sheet",
+            "commitment_letter",
+            "credit_agreement_amendment",
+            "facility_amendment",
+            "amended_and_restated_facility_agreement",
+            "other_facility_document"
+          ]
+        },
+        "document_title": {
+          "type": "string"
+        },
+        "source_file": {
+          "type": "string"
+        },
+        "execution_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "execution_version",
+            "signed",
+            "conformed_copy",
+            "term_sheet",
+            "unknown",
+            "other"
+          ]
+        },
+        "agreement_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "effective_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "document_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "binding_document": {
+          "type": "boolean"
+        },
+        "hierarchy_note": {
+          "type": "string",
+          "description": "Explanation of why the document is treated as facility-level rather than deal-level or loan-instrument-level."
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "parties_core": {
+      "type": "object",
+      "required": [
+        "borrowers"
+      ],
+      "properties": {
+        "borrowers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/party"
+          }
+        },
+        "lenders": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/party"
+          }
+        },
+        "agents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/party"
+          }
+        },
+        "arrangers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/party"
+          }
+        },
+        "guarantors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/party"
+          }
+        },
+        "obligors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/party"
+          }
+        },
+        "security_parties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/party"
+          }
+        },
+        "other_parties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/party"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "single_facility_core": {
+      "type": "object",
+      "required": [
+        "facility_id",
+        "type",
+        "currency",
+        "commitment_amount"
+      ],
+      "properties": {
+        "facility_id": {
+          "type": "string",
+          "description": "Stable identifier for the facility within this document; use 'main' for a single unnamed facility."
+        },
+        "facility_name": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/$defs/facility_type"
+        },
+        "subtype": {
+          "type": "string",
+          "description": "More specific market label if the generic type is insufficient."
+        },
+        "currency": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "commitment_amount": {
+          "$ref": "#/$defs/money_amount"
+        },
+        "commitment_amount_text": {
+          "type": "string",
+          "description": "Verbatim amount string where useful, e.g. where the amount is expressed in words."
+        },
+        "base_currency": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "purpose": {
+          "type": "string"
+        },
+        "purpose_restrictions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "seniority": {
+          "type": "string",
+          "enum": [
+            "senior",
+            "super_senior",
+            "subordinated",
+            "mezzanine",
+            "unsecured",
+            "other"
+          ]
+        },
+        "committed": {
+          "type": "boolean"
+        },
+        "facility_status": {
+          "type": "string",
+          "enum": [
+            "proposed",
+            "available",
+            "active",
+            "cancelled",
+            "amended",
+            "matured",
+            "unknown"
+          ]
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "legal_core": {
+      "type": "object",
+      "required": [
+        "governing_law"
+      ],
+      "properties": {
+        "governing_law": {
+          "type": "string"
+        },
+        "jurisdiction_clause": {
+          "type": "string"
+        },
+        "courts": {
+          "type": "string",
+          "description": "Court/forum selection, including exclusive/non-exclusive wording where available."
+        },
+        "process_agent": {
+          "$ref": "#/$defs/party"
+        },
+        "third_party_rights_excluded": {
+          "type": "boolean"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "facility_optional_blocks": {
+      "type": "object",
+      "description": "Concern-specific extensions. Omit blocks that are not present in the source document rather than inventing values. The normalised facility core stays deliberately small; detailed operational, legal and compliance concerns are optional because they are not uniformly present across facility agreements, term sheets and amendments.",
+      "properties": {
+        "interest_terms": {
+          "$ref": "#/$defs/interest_terms"
+        },
+        "availability_and_utilisation": {
+          "$ref": "#/$defs/availability_and_utilisation"
+        },
+        "repayment_and_maturity": {
+          "$ref": "#/$defs/repayment_and_maturity"
+        },
+        "payments_and_settlement": {
+          "$ref": "#/$defs/payments_and_settlement"
+        },
+        "security_and_guarantees": {
+          "$ref": "#/$defs/security_and_guarantees"
+        },
+        "collateral_perfection": {
+          "$ref": "#/$defs/collateral_perfection"
+        },
+        "conditions_precedent": {
+          "$ref": "#/$defs/conditions_precedent"
+        },
+        "representations": {
+          "$ref": "#/$defs/representations"
+        },
+        "covenants_and_undertakings": {
+          "$ref": "#/$defs/covenants_and_undertakings"
+        },
+        "covenant_calculation_definitions": {
+          "$ref": "#/$defs/covenant_calculation_definitions"
+        },
+        "events_of_default": {
+          "$ref": "#/$defs/events_of_default"
+        },
+        "undertakings_and_events_full_text": {
+          "$ref": "#/$defs/undertakings_and_events_full_text"
+        },
+        "prepayment_and_cancellation": {
+          "$ref": "#/$defs/prepayment_and_cancellation"
+        },
+        "transfers_and_assignments": {
+          "$ref": "#/$defs/transfers_and_assignments"
+        },
+        "notice_mechanics": {
+          "$ref": "#/$defs/notice_mechanics"
+        },
+        "fees_and_expenses": {
+          "$ref": "#/$defs/fees_and_expenses"
+        },
+        "public_sector_terms": {
+          "$ref": "#/$defs/public_sector_terms"
+        },
+        "term_sheet_terms": {
+          "$ref": "#/$defs/term_sheet_terms"
+        },
+        "amendment_overlay": {
+          "$ref": "#/$defs/amendment_overlay"
+        },
+        "tax_and_withholding": {
+          "$ref": "#/$defs/tax_and_withholding"
+        },
+        "compliance_kyc_aml_sanctions": {
+          "$ref": "#/$defs/compliance_kyc_aml_sanctions"
+        },
+        "regulatory_and_consents": {
+          "$ref": "#/$defs/regulatory_and_consents"
+        },
+        "reporting_and_information": {
+          "$ref": "#/$defs/reporting_and_information"
+        },
+        "operational_servicing_calendar": {
+          "$ref": "#/$defs/operational_servicing_calendar"
+        },
+        "clause_and_schedule_references": {
+          "$ref": "#/$defs/clause_and_schedule_references"
+        }
+      },
+      "additionalProperties": false
+    },
+    "interest_terms": {
+      "type": "object",
+      "required": [
+        "rate_type"
+      ],
+      "properties": {
+        "rate_type": {
+          "type": "string",
+          "enum": [
+            "fixed",
+            "floating_reference_plus_margin",
+            "reference_rate_only",
+            "margin_only",
+            "zero_coupon",
+            "other"
+          ]
+        },
+        "fixed_rate_pct": {
+          "$ref": "#/$defs/percentage"
+        },
+        "margin_pct": {
+          "$ref": "#/$defs/percentage"
+        },
+        "margin_bps": {
+          "type": "number"
+        },
+        "default_interest_uplift_pct": {
+          "$ref": "#/$defs/percentage"
+        },
+        "reference_rate_name": {
+          "type": "string",
+          "description": "Rate name as it should appear to downstream users. Prefer the specific benchmark where available, e.g. SONIA rather than a generic RFR label."
+        },
+        "reference_rate_canonical": {
+          "type": "string",
+          "enum": [
+            "SONIA",
+            "SOFR",
+            "EURIBOR",
+            "LIBOR",
+            "BBSW",
+            "BBSY",
+            "CDOR",
+            "Prime rate",
+            "National Loans Fund Interest Rate",
+            "Fixed",
+            "Other"
+          ]
+        },
+        "reference_rate_source": {
+          "type": "string"
+        },
+        "benchmark_administrator": {
+          "type": "string"
+        },
+        "interest_periods_months_allowed": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "uniqueItems": true
+        },
+        "accrual_basis": {
+          "type": "string",
+          "enum": [
+            "actual_360",
+            "actual_365",
+            "actual_365_fixed",
+            "30_360",
+            "other"
+          ]
+        },
+        "accrual_frequency": {
+          "type": "string",
+          "enum": [
+            "daily",
+            "monthly",
+            "quarterly",
+            "semiannual",
+            "annual",
+            "other"
+          ]
+        },
+        "payment_frequency": {
+          "type": "string",
+          "enum": [
+            "monthly",
+            "quarterly",
+            "semiannual",
+            "annual",
+            "at_maturity",
+            "other"
+          ]
+        },
+        "capitalisation": {
+          "type": "object",
+          "properties": {
+            "permitted": {
+              "type": "boolean"
+            },
+            "frequency": {
+              "type": "string",
+              "enum": [
+                "monthly",
+                "quarterly",
+                "semiannual",
+                "annual",
+                "none",
+                "other"
+              ]
+            },
+            "compounding_method": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "fallback_or_replacement_rate": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "availability_and_utilisation": {
+      "type": "object",
+      "properties": {
+        "availability_period_start": {
+          "$ref": "#/$defs/date_string"
+        },
+        "availability_period_end": {
+          "$ref": "#/$defs/date_string"
+        },
+        "availability_basis": {
+          "type": "string"
+        },
+        "min_draw_amount": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "max_draw_amount": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "min_loan_amount": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "max_loan_amount": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "drawdown_tranche_size": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "utilisation_notice_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_loans_outstanding": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "rollover_loans_permitted": {
+          "type": "boolean"
+        },
+        "reborrowing_permitted": {
+          "type": "boolean"
+        },
+        "optional_currencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/currency_code"
+          },
+          "uniqueItems": true
+        },
+        "letters_of_credit_permitted": {
+          "type": "boolean",
+          "description": "Populate only where the document clearly permits or excludes letters of credit for this facility."
+        },
+        "lender_discretion": {
+          "type": "boolean"
+        },
+        "signatories_required": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "repayment_instalment": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "date_description": {
+          "type": "string"
+        },
+        "amount": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "currency": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "percentage_of_original_commitment": {
+          "$ref": "#/$defs/percentage"
+        },
+        "description": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "repayment_and_maturity": {
+      "type": "object",
+      "properties": {
+        "maturity_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "termination_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "termination_basis": {
+          "type": "string",
+          "enum": [
+            "fixed_date",
+            "months_after_first_utilisation",
+            "months_after_agreement_date",
+            "on_demand",
+            "earlier_of_specified_events",
+            "other"
+          ]
+        },
+        "tenor_months": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "term_years_after_first_utilisation": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "repayment_profile": {
+          "type": "string",
+          "enum": [
+            "bullet",
+            "amortising",
+            "semiannual_amortising",
+            "on_demand_rollover",
+            "revolving_repaid_at_maturity",
+            "other"
+          ]
+        },
+        "instalments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/repayment_instalment"
+          }
+        },
+        "first_repayment_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "final_repayment_amount": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "mandatory_prepayment_notice_days_for_lender": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "prepayment_penalty": {
+          "type": "boolean"
+        },
+        "accelerating_events": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "loss_of_key_interest",
+              "termination_of_term_sheet",
+              "event_of_default",
+              "maturity",
+              "change_of_control",
+              "illegality",
+              "other"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "change_of_control_triggers_cancellation": {
+          "type": "boolean"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "security_asset": {
+      "type": "object",
+      "required": [
+        "description"
+      ],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "asset_type": {
+          "type": "string",
+          "enum": [
+            "JV_interest",
+            "equity_interest",
+            "real_property",
+            "receivables",
+            "bank_account",
+            "IP",
+            "plant_and_equipment",
+            "all_assets",
+            "other"
+          ]
+        },
+        "grantor": {
+          "type": "string"
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "security_and_guarantees": {
+      "type": "object",
+      "properties": {
+        "secured": {
+          "type": "boolean"
+        },
+        "priority": {
+          "type": "string",
+          "enum": [
+            "first_ranking",
+            "second_ranking",
+            "unsecured",
+            "subordinated",
+            "other"
+          ]
+        },
+        "security_agent_or_trustee": {
+          "$ref": "#/$defs/party"
+        },
+        "guarantors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/party"
+          }
+        },
+        "guarantee_type": {
+          "type": "string",
+          "enum": [
+            "unconditional_irrevocable",
+            "limited",
+            "several",
+            "joint_and_several",
+            "none",
+            "other"
+          ]
+        },
+        "assets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/security_asset"
+          }
+        },
+        "negative_pledge": {
+          "type": "boolean"
+        },
+        "agreed_security_principles_ref": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        },
+        "collateral_perfection_summary": {
+          "type": "string",
+          "description": "Narrative summary of perfection requirements where the source gives enough detail."
+        },
+        "perfection_steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/collateral_perfection_step"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "condition_item": {
+      "type": "object",
+      "required": [
+        "description"
+      ],
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "corporate_authorisations",
+            "finance_documents",
+            "security_documents",
+            "legal_opinions",
+            "regulatory_approvals",
+            "third_party_approvals",
+            "no_default",
+            "representations",
+            "fees",
+            "transaction_completion",
+            "other"
+          ]
+        },
+        "responsible_party": {
+          "type": "string"
+        },
+        "qualifier": {
+          "type": "string",
+          "description": "Materiality, satisfaction or no-waiver qualifier that must not be dropped."
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "conditions_precedent": {
+      "type": "object",
+      "properties": {
+        "schedule_ref": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition_item"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "representations": {
+      "type": "object",
+      "properties": {
+        "clause_ref": {
+          "type": "string"
+        },
+        "repeated_on": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "agreement_date",
+              "utilisation_date",
+              "interest_period_start",
+              "each_payment_date",
+              "other"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "materiality_qualifier": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/condition_item"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "covenant_item": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "leverage",
+            "interest_cover",
+            "debt_service_cover",
+            "loan_to_value",
+            "minimum_liquidity",
+            "springing_leverage",
+            "maintenance_leverage",
+            "incurrence_only",
+            "negative_pledge",
+            "restricted_payments",
+            "other"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "threshold": {
+          "type": "string"
+        },
+        "test_frequency": {
+          "type": "string"
+        },
+        "clause_ref": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        },
+        "calculation_definition_id": {
+          "type": "string",
+          "description": "Identifier linking this covenant to optional_blocks.covenant_calculation_definitions.definitions[].calculation_definition_id."
+        },
+        "formula_summary": {
+          "type": "string",
+          "description": "Plain-English summary of the covenant formula if a full calculation definition is not extracted."
+        },
+        "full_text": {
+          "type": "string",
+          "description": "Full covenant text where exhaustive legal-text capture is required."
+        }
+      },
+      "additionalProperties": false
+    },
+    "covenants_and_undertakings": {
+      "type": "object",
+      "properties": {
+        "financial_covenants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/covenant_item"
+          }
+        },
+        "information_undertakings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "general_undertakings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "restricted_payments": {
+          "type": "string"
+        },
+        "debt_restrictions": {
+          "type": "string"
+        },
+        "acquisition_restrictions": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        },
+        "covenant_calculation_definitions": {
+          "$ref": "#/$defs/covenant_calculation_definitions"
+        },
+        "undertakings_full_text": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/full_legal_text_item"
+          }
+        },
+        "exhaustive_undertakings_captured": {
+          "type": "boolean",
+          "description": "True only if all undertakings in scope have been captured, not merely summarised."
+        },
+        "omitted_undertaking_categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Use when extraction intentionally excludes boilerplate or categories outside scope."
+        }
+      },
+      "additionalProperties": false
+    },
+    "event_item": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "payment_default",
+            "other_covenant_default",
+            "cross_default",
+            "misrepresentation",
+            "insolvency",
+            "material_adverse_change",
+            "change_of_control",
+            "illegality",
+            "breach_of_security",
+            "other"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "grace_period_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "threshold_amount": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "threshold_currency": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        },
+        "clause_ref": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "full_text": {
+          "type": "string",
+          "description": "Full event-of-default text where exhaustive legal-text capture is required."
+        },
+        "remedy_or_consequence": {
+          "type": "string",
+          "description": "Acceleration, cancellation, enforcement or other consequence tied to this event, if stated."
+        }
+      },
+      "additionalProperties": false
+    },
+    "events_of_default": {
+      "type": "object",
+      "properties": {
+        "clause_ref": {
+          "type": "string"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event_item"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        },
+        "events_full_text": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/full_legal_text_item"
+          }
+        },
+        "exhaustive_events_captured": {
+          "type": "boolean",
+          "description": "True only if all Events of Default in scope have been captured, not merely summarised."
+        },
+        "acceleration_and_enforcement_rights": {
+          "type": "string",
+          "description": "Full or summarised text describing lender rights after an Event of Default."
+        },
+        "omitted_event_categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "trigger_item": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "asset_disposal",
+            "insurance_proceeds",
+            "change_of_control",
+            "IPO",
+            "debt_issuance",
+            "excess_cashflow",
+            "warranty_claims",
+            "illegality",
+            "event_of_default",
+            "other"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "clause_ref": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "prepayment_and_cancellation": {
+      "type": "object",
+      "properties": {
+        "voluntary_prepayment_permitted": {
+          "type": "boolean"
+        },
+        "mandatory_prepayment_triggers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trigger_item"
+          }
+        },
+        "cancellation_events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trigger_item"
+          }
+        },
+        "change_of_control": {
+          "type": "string"
+        },
+        "illegality": {
+          "type": "string"
+        },
+        "notice_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "fee_item": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "arrangement_fee",
+            "upfront_fee",
+            "commitment_fee",
+            "agency_fee",
+            "utilisation_fee",
+            "ticking_fee",
+            "exit_fee",
+            "prepayment_fee",
+            "legal_or_preparation_costs",
+            "other"
+          ]
+        },
+        "amount": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "currency": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "rate_pct": {
+          "$ref": "#/$defs/percentage"
+        },
+        "rate_bps": {
+          "type": "number"
+        },
+        "payable_to": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "fees_and_expenses": {
+      "type": "object",
+      "properties": {
+        "fees": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fee_item"
+          }
+        },
+        "fee_letter_dated": {
+          "$ref": "#/$defs/date_string"
+        },
+        "fee_letter_ref": {
+          "type": "string"
+        },
+        "lender_preparation_costs": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "public_sector_terms": {
+      "type": "object",
+      "properties": {
+        "public_body_lender": {
+          "type": "boolean"
+        },
+        "lender_statutory_authority": {
+          "type": "string",
+          "description": "Preserve role distinctions such as statutory power versus authority where the document makes them."
+        },
+        "statutory_power": {
+          "type": "string"
+        },
+        "statutory_authority": {
+          "type": "string"
+        },
+        "permitted_business_constraints": {
+          "type": "string"
+        },
+        "public_policy_constraints": {
+          "type": "string"
+        },
+        "third_party_rights_excluded": {
+          "type": "boolean"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "term_sheet_terms": {
+      "type": "object",
+      "properties": {
+        "binding": {
+          "type": "boolean"
+        },
+        "term_sheet_year": {
+          "type": "integer",
+          "minimum": 1900
+        },
+        "legally_binding_sections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "definitive_documents_required": {
+          "type": "boolean"
+        },
+        "conditions_to_definitive_documents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exclusivity": {
+          "type": "string"
+        },
+        "expiry_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "regulator_consents_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "base_agreement": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "original_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "governing_law": {
+          "type": "string"
+        },
+        "parties": {
+          "$ref": "#/$defs/parties_core"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "amendment_overlay": {
+      "type": "object",
+      "description": "Use for facility-amendment documents that modify an existing facility rather than creating a fresh facility from scratch.",
+      "properties": {
+        "amendment_number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "amendment_effective_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "base_agreement": {
+          "$ref": "#/$defs/base_agreement"
+        },
+        "amended_sections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "amended_definitions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "commitment_before": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "commitment_after": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "commitment_increase": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "sublimit_changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "before": {
+                "$ref": "#/$defs/non_negative_amount"
+              },
+              "after": {
+                "$ref": "#/$defs/non_negative_amount"
+              },
+              "currency": {
+                "$ref": "#/$defs/currency_code"
+              },
+              "description": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "consents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conditions_to_effectiveness": {
+          "$ref": "#/$defs/conditions_precedent"
+        },
+        "reaffirmations": {
+          "type": "object",
+          "properties": {
+            "guarantor_reaffirmation": {
+              "type": "boolean"
+            },
+            "security_reaffirmation": {
+              "type": "boolean"
+            },
+            "reps_and_warranties_repeated": {
+              "type": "boolean"
+            },
+            "no_default_continuing": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "new_fee_letter_dated": {
+          "$ref": "#/$defs/date_string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "tax_and_withholding": {
+      "type": "object",
+      "properties": {
+        "gross_up_required": {
+          "type": "boolean"
+        },
+        "withholding_tax_provisions": {
+          "type": "string"
+        },
+        "tax_gross_up_clause_ref": {
+          "type": "string"
+        },
+        "fatca_provisions": {
+          "type": "string"
+        },
+        "lender_tax_status": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "regulatory_and_consents": {
+      "type": "object",
+      "properties": {
+        "regulator_consents_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "third_party_consents_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "licence_or_permit_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "reporting_and_information": {
+      "type": "object",
+      "properties": {
+        "financial_statement_delivery": {
+          "type": "string"
+        },
+        "compliance_certificate_required": {
+          "type": "boolean"
+        },
+        "budget_or_business_plan_delivery": {
+          "type": "string"
+        },
+        "event_notice_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "clause_and_schedule_references": {
+      "type": "object",
+      "properties": {
+        "conditions_precedent_schedule_ref": {
+          "type": "string"
+        },
+        "events_of_default_clause_ref": {
+          "type": "string"
+        },
+        "representations_clause_ref": {
+          "type": "string"
+        },
+        "undertakings_clause_ref": {
+          "type": "string"
+        },
+        "financial_covenant_clause_ref": {
+          "type": "string"
+        },
+        "governing_law_clause_ref": {
+          "type": "string"
+        },
+        "jurisdiction_clause_ref": {
+          "type": "string"
+        },
+        "other_references": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source_ref"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_trace": {
+      "type": "object",
+      "description": "Extraction-level metadata. This block is not a substitute for field-level source_refs where precision matters.",
+      "properties": {
+        "source_document": {
+          "type": "string"
+        },
+        "source_text_path": {
+          "type": "string",
+          "description": "Path to extracted readable text used for PDF-grounded extraction, usually produced by extract_pdf_text. Required by validation for pdf_direct/hybrid PDF source documents."
+        },
+        "source_text_char_count": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Character count of the extracted readable source text when available."
+        },
+        "extraction_method": {
+          "type": "string",
+          "enum": [
+            "pdf_direct",
+            "intermediate_blob",
+            "manual",
+            "hybrid",
+            "unknown"
+          ]
+        },
+        "extraction_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "known_omissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "business_day_convention": {
+      "type": "string",
+      "enum": [
+        "following",
+        "modified_following",
+        "preceding",
+        "modified_preceding",
+        "no_adjustment",
+        "other"
+      ]
+    },
+    "bank_account_details": {
+      "type": "object",
+      "properties": {
+        "account_holder": {
+          "type": "string"
+        },
+        "account_bank": {
+          "type": "string"
+        },
+        "account_name": {
+          "type": "string"
+        },
+        "account_number": {
+          "type": "string"
+        },
+        "iban": {
+          "type": "string"
+        },
+        "sort_code": {
+          "type": "string"
+        },
+        "swift_bic": {
+          "type": "string"
+        },
+        "aba_or_routing_number": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "currency": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "intermediary_bank": {
+          "type": "string"
+        },
+        "payment_reference": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "payment_instruction": {
+      "type": "object",
+      "required": [
+        "payment_type"
+      ],
+      "properties": {
+        "payment_type": {
+          "type": "string",
+          "enum": [
+            "utilisation_advance",
+            "principal_repayment",
+            "interest_payment",
+            "fee_payment",
+            "prepayment",
+            "default_interest",
+            "costs_and_expenses",
+            "tax_gross_up",
+            "other"
+          ]
+        },
+        "payer": {
+          "type": "string"
+        },
+        "payee": {
+          "type": "string"
+        },
+        "payment_currency": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "account": {
+          "$ref": "#/$defs/bank_account_details"
+        },
+        "funds_type": {
+          "type": "string",
+          "enum": [
+            "same_day_funds",
+            "immediately_available_funds",
+            "cleared_funds",
+            "other"
+          ]
+        },
+        "payment_location": {
+          "type": "string"
+        },
+        "payment_timing": {
+          "type": "string"
+        },
+        "cutoff_time": {
+          "type": "string"
+        },
+        "business_day_convention": {
+          "$ref": "#/$defs/business_day_convention"
+        },
+        "set_off_permitted": {
+          "type": "boolean"
+        },
+        "deductions_or_withholding_permitted": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "payments_and_settlement": {
+      "type": "object",
+      "description": "Optional operational block for payment routing and settlement mechanics. It is optional because detailed bank-account instructions may be absent or redacted in some facility documents.",
+      "properties": {
+        "payment_agent": {
+          "$ref": "#/$defs/party"
+        },
+        "facility_office": {
+          "type": "string"
+        },
+        "payment_currency": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "currency_of_account": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "business_day_definition": {
+          "type": "string"
+        },
+        "business_day_convention": {
+          "$ref": "#/$defs/business_day_convention"
+        },
+        "payment_instructions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/payment_instruction"
+          }
+        },
+        "payment_waterfall": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Order of application of payments if stated."
+        },
+        "pro_rata_sharing_required": {
+          "type": "boolean"
+        },
+        "set_off_terms": {
+          "type": "string"
+        },
+        "payment_disruption_or_funding_indemnity": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "notice_address": {
+      "type": "object",
+      "required": [
+        "party_name"
+      ],
+      "properties": {
+        "party_name": {
+          "type": "string"
+        },
+        "party_role": {
+          "type": "string"
+        },
+        "attention": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "fax": {
+          "type": "string"
+        },
+        "telephone": {
+          "type": "string"
+        },
+        "electronic_platform": {
+          "type": "string"
+        },
+        "copy_to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "notice_mechanics": {
+      "type": "object",
+      "description": "Optional legal/operational block for formal notices and communications mechanics.",
+      "properties": {
+        "notices_clause_ref": {
+          "type": "string"
+        },
+        "permitted_methods": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "hand_delivery",
+              "post",
+              "courier",
+              "fax",
+              "email",
+              "electronic_platform",
+              "other"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "notice_addresses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/notice_address"
+          }
+        },
+        "deemed_delivery_rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notice_periods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "notice_type"
+            ],
+            "properties": {
+              "notice_type": {
+                "type": "string"
+              },
+              "period": {
+                "type": "string"
+              },
+              "business_days": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "calendar_days": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "source_refs": {
+                "$ref": "#/$defs/source_refs"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "language": {
+          "type": "string"
+        },
+        "electronic_communications_permitted": {
+          "type": "boolean"
+        },
+        "change_of_details_mechanics": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "transfers_and_assignments": {
+      "type": "object",
+      "description": "Optional legal/trading block for lender transfer, assignment, novation and participation restrictions.",
+      "properties": {
+        "transfers_clause_ref": {
+          "type": "string"
+        },
+        "assignment_permitted": {
+          "type": "boolean"
+        },
+        "transfer_permitted": {
+          "type": "boolean"
+        },
+        "novation_required": {
+          "type": "boolean"
+        },
+        "borrower_consent_required": {
+          "type": "boolean"
+        },
+        "borrower_consent_exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "agent_consent_required": {
+          "type": "boolean"
+        },
+        "minimum_transfer_amount": {
+          "$ref": "#/$defs/non_negative_amount"
+        },
+        "minimum_transfer_currency": {
+          "$ref": "#/$defs/currency_code"
+        },
+        "permitted_transferees": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "prohibited_transferees": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disqualified_institutions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "transfer_fee": {
+          "type": "string"
+        },
+        "transfer_certificate_ref": {
+          "type": "string"
+        },
+        "assignment_agreement_ref": {
+          "type": "string"
+        },
+        "subparticipation_permitted": {
+          "type": "boolean"
+        },
+        "disclosure_to_potential_transferees": {
+          "type": "string"
+        },
+        "tax_gross_up_protection_for_transferee": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "covenant_defined_term": {
+      "type": "object",
+      "required": [
+        "term",
+        "definition_text"
+      ],
+      "properties": {
+        "term": {
+          "type": "string"
+        },
+        "definition_text": {
+          "type": "string"
+        },
+        "normalised_meaning": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "covenant_calculation_component": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "numerator",
+            "denominator",
+            "add_back",
+            "deduction",
+            "threshold",
+            "basket",
+            "carve_out",
+            "input",
+            "other"
+          ]
+        },
+        "definition_text": {
+          "type": "string"
+        },
+        "value_source": {
+          "type": "string"
+        },
+        "included_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excluded_items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "covenant_calculation_definition": {
+      "type": "object",
+      "required": [
+        "calculation_definition_id",
+        "covenant_type"
+      ],
+      "properties": {
+        "calculation_definition_id": {
+          "type": "string"
+        },
+        "covenant_type": {
+          "type": "string",
+          "enum": [
+            "leverage",
+            "springing_leverage",
+            "interest_cover",
+            "debt_service_cover",
+            "loan_to_value",
+            "minimum_liquidity",
+            "borrowing_base",
+            "other"
+          ]
+        },
+        "full_formula_text": {
+          "type": "string"
+        },
+        "normalised_formula": {
+          "type": "string",
+          "description": "Machine-readable or pseudo-code formula, if safely derivable from the document."
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/covenant_calculation_component"
+          }
+        },
+        "testing_period": {
+          "type": "string"
+        },
+        "testing_frequency": {
+          "type": "string"
+        },
+        "first_test_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "accounting_basis": {
+          "type": "string"
+        },
+        "currency_translation_rules": {
+          "type": "string"
+        },
+        "threshold_schedule": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "period": {
+                "type": "string"
+              },
+              "threshold": {
+                "type": "string"
+              },
+              "source_refs": {
+                "$ref": "#/$defs/source_refs"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "equity_cure_mechanics": {
+          "type": "string"
+        },
+        "definitions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/covenant_defined_term"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "covenant_calculation_definitions": {
+      "type": "object",
+      "description": "Optional credit/legal block for complete covenant formula extraction. Kept outside core because many simple bilateral facilities and term sheets have no financial covenant package.",
+      "properties": {
+        "definitions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/covenant_calculation_definition"
+          }
+        },
+        "exhaustive_calculations_captured": {
+          "type": "boolean",
+          "description": "True only if all covenant formulas and defined terms in scope have been captured."
+        },
+        "omitted_calculation_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "full_legal_text_item": {
+      "type": "object",
+      "required": [
+        "category",
+        "full_text"
+      ],
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "undertaking",
+            "information_undertaking",
+            "financial_covenant",
+            "general_undertaking",
+            "event_of_default",
+            "representation",
+            "condition_precedent",
+            "remedy",
+            "other"
+          ]
+        },
+        "clause_ref": {
+          "type": "string"
+        },
+        "heading": {
+          "type": "string"
+        },
+        "full_text": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "applies_to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "material_qualifiers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "carveouts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "undertakings_and_events_full_text": {
+      "type": "object",
+      "description": "Optional legal block for exhaustive undertaking and Event of Default text. Use when legal review needs complete clause text rather than summaries.",
+      "properties": {
+        "undertakings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/full_legal_text_item"
+          }
+        },
+        "events_of_default": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/full_legal_text_item"
+          }
+        },
+        "remedies_after_event_of_default": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/full_legal_text_item"
+          }
+        },
+        "exhaustive_undertakings_captured": {
+          "type": "boolean"
+        },
+        "exhaustive_events_captured": {
+          "type": "boolean"
+        },
+        "extraction_scope_note": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "collateral_perfection_step": {
+      "type": "object",
+      "required": [
+        "action_description"
+      ],
+      "properties": {
+        "step_id": {
+          "type": "string"
+        },
+        "action_description": {
+          "type": "string"
+        },
+        "collateral_type": {
+          "type": "string",
+          "enum": [
+            "shares",
+            "JV_interest",
+            "bank_account",
+            "receivables",
+            "real_property",
+            "IP",
+            "plant_and_equipment",
+            "all_assets",
+            "other"
+          ]
+        },
+        "jurisdiction": {
+          "type": "string"
+        },
+        "grantor": {
+          "type": "string"
+        },
+        "secured_party_or_agent": {
+          "type": "string"
+        },
+        "filing_or_registration_office": {
+          "type": "string"
+        },
+        "filing_type": {
+          "type": "string"
+        },
+        "deadline": {
+          "type": "string"
+        },
+        "deadline_date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "responsible_party": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "condition_precedent",
+            "post_closing",
+            "completed",
+            "not_required",
+            "unknown",
+            "other"
+          ]
+        },
+        "evidence_required": {
+          "type": "string"
+        },
+        "registration_number": {
+          "type": "string"
+        },
+        "priority_requirement": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "collateral_perfection": {
+      "type": "object",
+      "description": "Optional security/legal operations block for collateral perfection actions. Use where the document specifies registration, filing, delivery, notice or post-closing perfection steps.",
+      "properties": {
+        "perfection_required": {
+          "type": "boolean"
+        },
+        "perfection_summary": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/collateral_perfection_step"
+          }
+        },
+        "post_closing_obligations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/collateral_perfection_step"
+          }
+        },
+        "security_document_delivery_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "control_agreements_required": {
+          "type": "boolean"
+        },
+        "share_certificates_or_instruments_to_be_delivered": {
+          "type": "boolean"
+        },
+        "notices_to_third_parties_required": {
+          "type": "boolean"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "compliance_check_item": {
+      "type": "object",
+      "required": [
+        "check_type"
+      ],
+      "properties": {
+        "check_type": {
+          "type": "string",
+          "enum": [
+            "KYC",
+            "AML",
+            "sanctions",
+            "anti_bribery_and_corruption",
+            "beneficial_ownership",
+            "tax_compliance",
+            "regulatory_status",
+            "other"
+          ]
+        },
+        "applies_to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requirement_text": {
+          "type": "string"
+        },
+        "documents_required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "required",
+            "satisfied",
+            "waived",
+            "ongoing",
+            "not_stated",
+            "unknown"
+          ]
+        },
+        "responsible_party": {
+          "type": "string"
+        },
+        "deadline": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "compliance_kyc_aml_sanctions": {
+      "type": "object",
+      "description": "Optional compliance block for KYC, AML, sanctions and anti-corruption information. Generally extracted only where the facility document itself states the requirement or representation.",
+      "properties": {
+        "kyc_required": {
+          "type": "boolean"
+        },
+        "aml_representation_present": {
+          "type": "boolean"
+        },
+        "sanctions_representation_present": {
+          "type": "boolean"
+        },
+        "anti_corruption_representation_present": {
+          "type": "boolean"
+        },
+        "beneficial_ownership_information_required": {
+          "type": "boolean"
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/compliance_check_item"
+          }
+        },
+        "sanctions_clause_ref": {
+          "type": "string"
+        },
+        "aml_clause_ref": {
+          "type": "string"
+        },
+        "anti_corruption_clause_ref": {
+          "type": "string"
+        },
+        "restricted_party_definitions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/covenant_defined_term"
+          }
+        },
+        "ongoing_covenants": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "servicing_calendar_event": {
+      "type": "object",
+      "required": [
+        "event_type",
+        "description"
+      ],
+      "properties": {
+        "event_type": {
+          "type": "string",
+          "enum": [
+            "availability_end",
+            "utilisation_request_deadline",
+            "interest_payment_date",
+            "principal_repayment_date",
+            "fee_payment_date",
+            "financial_statement_delivery",
+            "compliance_certificate_delivery",
+            "covenant_test_date",
+            "maturity_date",
+            "termination_date",
+            "notice_deadline",
+            "collateral_perfection_deadline",
+            "condition_subsequent_deadline",
+            "other"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "date": {
+          "$ref": "#/$defs/date_string"
+        },
+        "date_rule": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string",
+          "enum": [
+            "one_off",
+            "daily",
+            "weekly",
+            "monthly",
+            "quarterly",
+            "semiannual",
+            "annual",
+            "on_demand",
+            "other"
+          ]
+        },
+        "business_day_convention": {
+          "$ref": "#/$defs/business_day_convention"
+        },
+        "calendar": {
+          "type": "string"
+        },
+        "responsible_party": {
+          "type": "string"
+        },
+        "recipient": {
+          "type": "string"
+        },
+        "applies_to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reminder_days_before": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    },
+    "operational_servicing_calendar": {
+      "type": "object",
+      "description": "Optional operations block converting document dates, date rules and recurring obligations into servicing events.",
+      "properties": {
+        "calendar_basis": {
+          "type": "string"
+        },
+        "business_day_definition": {
+          "type": "string"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/servicing_calendar_event"
+          }
+        },
+        "generated_from_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Schema paths used to generate the calendar event list, where applicable."
+        },
+        "manual_review_required": {
+          "type": "boolean"
+        },
+        "manual_review_reason": {
+          "type": "string"
+        },
+        "source_refs": {
+          "$ref": "#/$defs/source_refs"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

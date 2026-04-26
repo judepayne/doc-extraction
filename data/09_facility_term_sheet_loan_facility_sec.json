@@ -1,0 +1,284 @@
+{
+  "$schema": "https://raw.githubusercontent.com/judepayne/doc-extraction/main/validation/models/facility.schema.v1.0.0.json",
+  "schema_version": "1.0.0",
+  "document_level": "facility",
+  "core": {
+    "document": {
+      "document_type": "loan_facility_term_sheet",
+      "document_title": "Binding Term Sheet - Secured Working Capital Loan Facility",
+      "source_file": "docs/09_facility_term_sheet_loan_facility_sec.pdf",
+      "execution_status": "term_sheet",
+      "binding_document": true,
+      "hierarchy_note": "Single secured working-capital loan facility term sheet; not a multi-facility deal and not an individual drawdown."
+    },
+    "parties": {
+      "borrowers": [
+        {
+          "name": "Mintails South Africa (Proprietary) Limited",
+          "role": "Borrower",
+          "party_type": "company",
+          "jurisdiction": "South Africa",
+          "registered_number": "2004/007547/07"
+        }
+      ],
+      "lenders": [
+        {
+          "name": "DRDGOLD Limited",
+          "role": "Lender",
+          "party_type": "company",
+          "jurisdiction": "South Africa",
+          "registered_number": "1895/000926/06"
+        }
+      ],
+      "guarantors": [
+        {
+          "name": "Mintails Limited",
+          "role": "Guarantor",
+          "party_type": "company",
+          "jurisdiction": "Australia"
+        }
+      ],
+      "obligors": [
+        {
+          "name": "Mintails South Africa (Proprietary) Limited",
+          "role": "Borrower",
+          "party_type": "company",
+          "jurisdiction": "South Africa",
+          "registered_number": "2004/007547/07"
+        },
+        {
+          "name": "Mintails Limited",
+          "role": "Guarantor",
+          "party_type": "company",
+          "jurisdiction": "Australia"
+        }
+      ],
+      "security_parties": [
+        {
+          "name": "Mogale Gold (Pty) Limited",
+          "role": "Acknowledging Party",
+          "party_type": "company",
+          "jurisdiction": "South Africa"
+        },
+        {
+          "name": "Ergo Uranium (Pty) Limited",
+          "role": "Acknowledging Party",
+          "party_type": "company",
+          "jurisdiction": "South Africa"
+        }
+      ],
+      "other_parties": [
+        {
+          "name": "Mogale Gold (Pty) Limited",
+          "role": "Acknowledging Party",
+          "party_type": "company",
+          "jurisdiction": "South Africa"
+        },
+        {
+          "name": "Ergo Uranium (Pty) Limited",
+          "role": "Acknowledging Party",
+          "party_type": "company",
+          "jurisdiction": "South Africa"
+        }
+      ]
+    },
+    "facility": {
+      "facility_id": "main",
+      "facility_name": "Secured working capital loan facility",
+      "type": "working_capital",
+      "currency": "ZAR",
+      "commitment_amount": 65000000,
+      "commitment_amount_text": "ZAR 65,000,000",
+      "purpose": "Short-term working capital funding for the Borrower's ordinary course of business expenditures and the Lender's costs associated with preparation of the Facility and associated securities.",
+      "purpose_restrictions": [
+        "Ordinary course business expenditures only.",
+        "No related-party payments.",
+        "No distributions.",
+        "No board or senior management bonuses.",
+        "Lender facility-preparation costs and associated securities costs are permitted."
+      ],
+      "committed": true,
+      "facility_status": "proposed"
+    },
+    "legal": {
+      "governing_law": "South African law",
+      "jurisdiction_clause": "Non-exclusive jurisdiction of the Courts of South Africa",
+      "courts": "Courts of South Africa"
+    }
+  },
+  "optional_blocks": {
+    "term_sheet_terms": {
+      "binding": true,
+      "term_sheet_year": 2008,
+      "definitive_documents_required": true,
+      "regulator_consents_required": [
+        "South African Reserve Bank"
+      ]
+    },
+    "interest_terms": {
+      "rate_type": "floating_reference_plus_margin",
+      "margin_bps": 200,
+      "reference_rate_name": "Prime rate",
+      "reference_rate_canonical": "Prime rate",
+      "reference_rate_source": "Standard Bank of South Africa",
+      "accrual_frequency": "monthly",
+      "capitalisation": {
+        "permitted": true,
+        "frequency": "monthly"
+      }
+    },
+    "availability_and_utilisation": {
+      "drawdown_tranche_size": 10000000,
+      "lender_discretion": true,
+      "signatories_required": 2
+    },
+    "repayment_and_maturity": {
+      "termination_basis": "earlier_of_specified_events",
+      "tenor_months": 12,
+      "repayment_profile": "bullet",
+      "prepayment_penalty": false,
+      "accelerating_events": [
+        "termination_of_term_sheet",
+        "loss_of_key_interest",
+        "event_of_default",
+        "maturity"
+      ]
+    },
+    "security_and_guarantees": {
+      "secured": true,
+      "priority": "first_ranking",
+      "guarantors": [
+        {
+          "name": "Mintails Limited",
+          "role": "Guarantor",
+          "party_type": "company",
+          "jurisdiction": "Australia"
+        }
+      ],
+      "guarantee_type": "unconditional_irrevocable",
+      "assets": [
+        {
+          "description": "Percentage Interest held by the Borrower or any member of the Borrower's Group in the Elsburg Gold Mining Joint Venture (Elsburg JV)",
+          "asset_type": "JV_interest"
+        },
+        {
+          "description": "Interest held by the Borrower and any member of the Borrower's Group in Ergo Mining (Pty) Limited",
+          "asset_type": "equity_interest"
+        }
+      ],
+      "negative_pledge": true,
+      "collateral_perfection_summary": "Security is to be granted over specified JV/equity interests as a condition precedent or definitive-document requirement. Detailed registration steps are not extracted from the term sheet."
+    },
+    "conditions_precedent": {
+      "items": [
+        {
+          "description": "South African Reserve Bank approval or consent where required.",
+          "category": "regulatory_approvals"
+        },
+        {
+          "description": "Lender due diligence satisfactory.",
+          "category": "other"
+        },
+        {
+          "description": "Security granted over the specified secured assets.",
+          "category": "security_documents"
+        },
+        {
+          "description": "Borrower board resolutions or equivalent corporate authorisations.",
+          "category": "corporate_authorisations"
+        },
+        {
+          "description": "Solvency certificate or equivalent solvency confirmation.",
+          "category": "corporate_authorisations"
+        }
+      ]
+    },
+    "covenants_and_undertakings": {
+      "general_undertakings": [
+        "Use proceeds only for ordinary-course business expenditures and permitted facility/securities preparation costs.",
+        "Do not make related-party payments from facility proceeds.",
+        "Do not make distributions from facility proceeds.",
+        "Do not pay board or senior management bonuses from facility proceeds.",
+        "Maintain first-ranking security over the specified secured assets."
+      ],
+      "restricted_payments": "Use of funds restrictions prohibit distributions and board or senior management bonuses.",
+      "debt_restrictions": "Negative pledge applies."
+    },
+    "events_of_default": {
+      "events": [
+        {
+          "type": "payment_default",
+          "description": "Payment default."
+        },
+        {
+          "type": "other_covenant_default",
+          "description": "Breach of covenant or other term sheet obligation."
+        },
+        {
+          "type": "cross_default",
+          "description": "Cross-default."
+        },
+        {
+          "type": "misrepresentation",
+          "description": "Misrepresentation."
+        },
+        {
+          "type": "material_adverse_change",
+          "description": "Material adverse change."
+        },
+        {
+          "type": "insolvency",
+          "description": "Insolvency."
+        }
+      ]
+    },
+    "fees_and_expenses": {
+      "lender_preparation_costs": "Facility purpose includes the Lender's costs associated with preparation of the Facility and associated securities.",
+      "fees": [
+        {
+          "type": "legal_or_preparation_costs",
+          "description": "Lender's costs associated with preparation of the Facility and associated securities."
+        }
+      ]
+    },
+    "regulatory_and_consents": {
+      "regulator_consents_required": [
+        "South African Reserve Bank"
+      ]
+    },
+    "clause_and_schedule_references": {
+      "other_references": [
+        {
+          "location_type": "section",
+          "reference": "Parties"
+        },
+        {
+          "location_type": "section",
+          "reference": "Facility"
+        },
+        {
+          "location_type": "section",
+          "reference": "Security"
+        },
+        {
+          "location_type": "section",
+          "reference": "Governing law and jurisdiction"
+        }
+      ]
+    }
+  },
+  "source_trace": {
+    "source_document": "docs/09_facility_term_sheet_loan_facility_sec.pdf",
+    "extraction_method": "manual",
+    "extraction_notes": [
+      "Manually mapped from the facility term sheet into the project generic facility schema.",
+      "Selected as a non-trivial facility document because it includes a binding term-sheet posture, guarantor, security package, conditions precedent, use-of-funds restrictions and events of default."
+    ],
+    "known_omissions": [
+      "Validated against the project facility ruleset; remaining provenance warning relates to missing block-level source_refs on several optional blocks.",
+      "Detailed collateral filing/perfection steps, notice mechanics and payment account details were not extracted because they are not apparent from the available term-sheet-level facts."
+    ],
+    "source_text_path": "data/09_facility_term_sheet_loan_facility_sec.json.source.txt",
+    "source_text_char_count": 15060
+  }
+}

@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doc-extraction"
+version = "0.1.0"
+description = "Commercial loan document extraction schemas, skills, and validation wiring."
+requires-python = ">=3.9"
+dependencies = [
+  "jsonschema>=4.17.0",
+  "pypdf>=6.4.0",
+  "PyYAML>=6.0",
+  "validation-lib @ git+https://github.com/judepayne/validation-lib.git@ff966a6db4d571d5e84123348a62c4a6061a49d5",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+]
+
+[tool.setuptools]
+py-modules = []

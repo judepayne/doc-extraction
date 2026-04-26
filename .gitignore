@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Pi runtime/local artifacts
+.pi/headless-runs/
+.pi/headless-sessions/
+.pi/state/
+.pi/todos/
+.pi/agent-mode-vars.json
+.pi/agent-mode-vars-config.json
+
+# Local extracted scratch text can be large; keep curated source sidecars in data/ explicitly.
+/tmp/

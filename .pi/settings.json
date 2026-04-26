@@ -1,0 +1,12 @@
+{
+  "extensions": [
+    "../extensions/validation",
+    "../extensions/pdf"
+  ],
+  "skills": [
+    "../skills"
+  ],
+  "prompts": [
+    "prompts"
+  ]
+}
