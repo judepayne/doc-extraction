@@ -21,7 +21,39 @@ The central design split is:
 - **Validation rules** catch deterministic problems: schema failures, missing core data, inconsistent economics, bad provenance, invalid commitments, and similar issues.
 
 ---
+## How I built this
 
+This is the only human written section of the README. The rest is agent generated.
+
+This is a POC project that I built in a very AI intensive way, with the following steps.
+
+0. [Working within the Pi coding agent (an agentic coding TUI, similar to Claude code, Codex etc)..]
+1. (Ask Opus 5.7 High to) research a number of real deal and facility commercial legal agreements from across the web.
+2. ( " ) to produce a facility schema by reading across the example facility docs, and same for deal.
+3. (Ask gpt-5.5 xHigh) to attempt to extract from one facility doc into the schema, then manually metriculously compare output vs document.
+4. ( " ) With the lessons learned, decide what rule should best be a hard validation rule vs skill and formulate as validation rules or in the facility skill
+5. (with ") Keep iterating across other example docs tweaking the schema (keeping it generic) and building up additonal validation rules and deepening the skill
+6. Same process for the Deal side
+7. In the process of doing this, wrote a tool wrapper to my existing validation-lib (python). The form of this is a Pi 'extension' and makes it easy for any Pi agent to call. I also found that the agent needed a way to get text from the pdf, so wrote that as well. I say 'wrote', but of course the agent wrote both wrappers.
+
+> Note: It was a non-goal to start from paper document scans e.g. images.
+
+> Note: the pdf tool could be a source of inaccuracy in the overall conversion process. Needs careful testing.
+
+Now switch to a headless agent run. Pi is an agentic framework (Openclaw is built on top of) similarly to Langchain but less clunky/ heavyweight to work this.
+I knew that with Pi you can fire off a 'one shot agent' with a simple command line call. I wanted to have the doc extraction agent be a command line tool, as gives us the greatest flexibility of deployment. The below call can easily be replicated in code working with the Pi framework (which is Typescript, so javascript easy).
+
+You'll find the command line call documentated and explained below.
+I had the TUI agent build up and run the command on different docs several times, inspect the output and fix any issues. This formed the basis of further iterations to find tune both the skill and the validation rules. Did the same thing for the Deal.
+
+> Note: the schemas that were built up have not been human inspected, but are based on a core set of fields and then optional blocks addressing different concerns, e.g. collateral block.
+
+Total time for POC project: 2.5 years
+Tokens used: ~600-800k
+Equivalent api cost: ~ $80. (but I don't use Opus, Gpt api. Have subscriptions instead).
+
+
+---
 ## Quickstart: run a headless extraction
 
 ### 1. Install system dependencies
