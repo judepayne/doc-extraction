@@ -8,5 +8,8 @@
   ],
   "prompts": [
     "prompts"
+  ],
+  "packages": [
+    "../../../../../../../Dropbox/Projects/agent/picode"
   ]
 }
