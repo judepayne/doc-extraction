@@ -30,7 +30,7 @@ This is a POC project that I built in a very AI intensive way, with the followin
 0. [Working within the Pi coding agent (an agentic coding TUI, similar to Claude code, Codex etc)..]
 1. (Ask Opus 5.7 High to) research a number of real deal and facility commercial legal agreements from across the web.
 2. ( " ) to produce a facility schema by reading across the example facility docs, and same for deal.
-3. (Ask gpt-5.5 xHigh) to attempt to extract from one facility doc into the schema, then manually metriculously compare output vs document.
+3. (Ask gpt-5.5 xHigh) to attempt to extract from one facility doc into the schema, then manually meticulously compare output vs document.
 4. ( " ) With the lessons learned, decide what rule should best be a hard validation rule vs skill and formulate as validation rules or in the facility skill
 5. (with ") Keep iterating across other example docs tweaking the schema (keeping it generic) and building up additonal validation rules and deepening the skill
 6. Same process for the Deal side
