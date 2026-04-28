@@ -1,0 +1,939 @@
+{
+  "$schema": "https://raw.githubusercontent.com/judepayne/doc-extraction/main/validation/models/facility.schema.v1.0.0.json",
+  "schema_version": "1.0.0",
+  "document_level": "facility",
+  "core": {
+    "document": {
+      "document_type": "facility_agreement",
+      "document_title": "Facility agreement",
+      "source_file": "docs/06_facility_dignity_phoenix_facility_agreement.pdf",
+      "execution_status": "execution_version",
+      "document_date": "2022-12-06",
+      "binding_document": true,
+      "hierarchy_note": "Single bilateral term loan facility agreement, not a multi-facility deal document and not an individual utilisation/loan instrument.",
+      "source_refs": [
+        {
+          "location_type": "page",
+          "reference": "Page 1",
+          "page": 1,
+          "quote": "EXECUTION VERSION"
+        },
+        {
+          "location_type": "page",
+          "reference": "Page 1",
+          "page": 1,
+          "quote": "£50,000,000"
+        },
+        {
+          "location_type": "page",
+          "reference": "Page 1",
+          "page": 1,
+          "quote": "6 December 2022"
+        }
+      ]
+    },
+    "parties": {
+      "borrowers": [
+        {
+          "name": "DIGNITY PLC",
+          "legal_name": "DIGNITY PLC",
+          "role": "Borrower",
+          "party_type": "company",
+          "source_refs": [
+            {
+              "location_type": "clause",
+              "reference": "Opening parties",
+              "page": 4,
+              "quote": "DIGNITY PLC (the \"Company\") and as borrower (the \" Borrower\")"
+            }
+          ]
+        }
+      ],
+      "lenders": [
+        {
+          "name": "PHOENIX UK FUND LTD",
+          "legal_name": "PHOENIX UK FUND LTD",
+          "role": "Lender",
+          "party_type": "fund",
+          "is_fund": true,
+          "source_refs": [
+            {
+              "location_type": "clause",
+              "reference": "Opening parties",
+              "page": 4,
+              "quote": "PHOENIX UK FUND LTD. as lender (the \" Lender\")"
+            }
+          ]
+        }
+      ]
+    },
+    "facility": {
+      "facility_id": "main",
+      "facility_name": "Facility",
+      "type": "term_loan",
+      "currency": "GBP",
+      "commitment_amount": 50000000,
+      "commitment_amount_text": "£50,000,000",
+      "base_currency": "GBP",
+      "purpose": "Provision of equity support to the Borrower's whole business securitisation through share subscription and/or subordinated debt.",
+      "purpose_restrictions": [
+        "The Lender is not bound to monitor or verify the application of any amount borrowed pursuant to the Agreement."
+      ],
+      "seniority": "unsecured",
+      "committed": true,
+      "facility_status": "active",
+      "source_refs": [
+        {
+          "location_type": "definition",
+          "reference": "Definition of Commitment",
+          "page": 5,
+          "quote": "\"Commitment\" means £50,000,000"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 2",
+          "title": "The Facility",
+          "page": 10,
+          "quote": "a sterling term loan facility in an amount equal to the Commitment"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 3.1",
+          "title": "Purpose",
+          "page": 10,
+          "quote": "towards the provision of equity support to its whole business securitisation"
+        }
+      ]
+    },
+    "legal": {
+      "governing_law": "English law",
+      "jurisdiction_clause": "The courts of England have exclusive jurisdiction to settle disputes arising out of or in connection with the Agreement.",
+      "courts": "Courts of England; exclusive jurisdiction.",
+      "third_party_rights_excluded": true,
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 28",
+          "title": "Governing law",
+          "page": 33,
+          "quote": "are governed by English law"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 29.1",
+          "title": "Jurisdiction",
+          "page": 33,
+          "quote": "The courts of England have exclusive jurisdiction"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 1.4",
+          "title": "Third party rights",
+          "page": 9,
+          "quote": "has no right under the Contracts (Rights of Third Parties) Act 1999"
+        }
+      ]
+    }
+  },
+  "optional_blocks": {
+    "interest_terms": {
+      "rate_type": "fixed",
+      "fixed_rate_pct": 7,
+      "reference_rate_canonical": "Fixed",
+      "interest_periods_months_allowed": [
+        1,
+        3,
+        6
+      ],
+      "accrual_basis": "actual_360",
+      "accrual_frequency": "daily",
+      "capitalisation": {
+        "permitted": true,
+        "frequency": "other",
+        "compounding_method": "Interest is automatically capitalised on the last day of the first Interest Period and on the last day of each subsequent Interest Period."
+      },
+      "source_refs": [
+        {
+          "location_type": "definition",
+          "reference": "Definition of Interest Rate",
+          "page": 7,
+          "quote": "“Interest Rate” means seven per cent.."
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 8.1",
+          "title": "Calculation of interest",
+          "page": 14,
+          "quote": "is the equal to the Interest Rate"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 8.2",
+          "title": "Capitalisation of payment of interest",
+          "page": 14,
+          "quote": "Interest shall be automatically capitalised"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 21.3",
+          "title": "Day count convention",
+          "page": 29,
+          "quote": "calculated on the basis of the actual number of days elapsed and a year of 360 days"
+        }
+      ]
+    },
+    "availability_and_utilisation": {
+      "availability_basis": "From and including the date of the Agreement to and including the date which is 12 Months after the date of the Agreement.",
+      "min_loan_amount": 10000000,
+      "utilisation_notice_days": 7,
+      "max_loans_outstanding": 5,
+      "reborrowing_permitted": false,
+      "optional_currencies": [
+        "GBP"
+      ],
+      "source_refs": [
+        {
+          "location_type": "definition",
+          "reference": "Definition of Availability Period",
+          "page": 4,
+          "quote": "to and including the date which is 12 Months after the date of this Agreement"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 4.3",
+          "title": "Maximum number of Loans",
+          "page": 10,
+          "quote": "more than five Loans would be outstanding"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 5.1(a)",
+          "title": "Delivery of a Utilisation Request",
+          "page": 11,
+          "quote": "not later than 10:00 a.m. seven days before the First Utilisation Date"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 5.1(b)",
+          "title": "Delivery of a Utilisation Request",
+          "page": 11,
+          "quote": "not later than 10:00 a.m. thirty days before the Utilisation Date"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 5.3",
+          "title": "Currency and amount",
+          "page": 11,
+          "quote": "a minimum of £10,000,000 or, if less, the Available Commitment"
+        }
+      ]
+    },
+    "repayment_and_maturity": {
+      "termination_basis": "months_after_first_utilisation",
+      "tenor_months": 36,
+      "term_years_after_first_utilisation": 3,
+      "repayment_profile": "bullet",
+      "mandatory_prepayment_notice_days_for_lender": 180,
+      "prepayment_penalty": false,
+      "accelerating_events": [
+        "change_of_control",
+        "event_of_default",
+        "maturity"
+      ],
+      "change_of_control_triggers_cancellation": true,
+      "source_refs": [
+        {
+          "location_type": "definition",
+          "reference": "Definition of Termination Date",
+          "page": 8,
+          "quote": "the date which is three years after the date of the first Utilisation Request"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 6.1",
+          "title": "Repayment of Loans",
+          "page": 12,
+          "quote": "The Borrower shall repay each Loan on the Termination Date"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 7.4",
+          "title": "Mandatory prepayment at the request of the Lender",
+          "page": 12,
+          "quote": "giving not less than 180 days’ prior notice in writing"
+        }
+      ]
+    },
+    "payments_and_settlement": {
+      "payment_currency": "GBP",
+      "currency_of_account": "GBP",
+      "business_day_definition": "A day other than Saturday or Sunday on which banks are open for general business in London.",
+      "business_day_convention": "modified_following",
+      "set_off_terms": "Borrower payments must be made without set-off or counterclaim; the Lender may set off matured obligations owed by the Borrower against matured obligations owed by the Lender to the Borrower.",
+      "payment_disruption_or_funding_indemnity": "The Agreement contains Disruption Event payment-system provisions and indemnity for specified costs, losses or liabilities from Events of Default, non-payment, failed funding arrangements or failure to prepay after notice.",
+      "source_refs": [
+        {
+          "location_type": "definition",
+          "reference": "Definition of Business Day",
+          "page": 4,
+          "quote": "banks are open for general business in London"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 18.7",
+          "title": "Currency of account",
+          "page": 27,
+          "quote": "the Base Currency is the currency of account and payment"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 18.6",
+          "title": "Business Days",
+          "page": 26,
+          "quote": "shall be made on the next Business Day in the same calendar month"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 19",
+          "title": "Set-off",
+          "page": 27,
+          "quote": "The Lender may set off any matured obligation due from the Borrower"
+        }
+      ]
+    },
+    "security_and_guarantees": {
+      "secured": false,
+      "priority": "unsecured",
+      "guarantee_type": "none",
+      "negative_pledge": true,
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 11.11",
+          "title": "Pari passu ranking",
+          "page": 18,
+          "quote": "rank at least pari passu with the claims of all its other unsecured and unsubordinated creditors"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 13.6",
+          "title": "Negative pledge",
+          "page": 20,
+          "quote": "The Borrower shall not create or permit to subsist any Security over any of its assets"
+        }
+      ]
+    },
+    "conditions_precedent": {
+      "schedule_ref": "Schedule 1 (Conditions precedent)",
+      "items": [
+        {
+          "description": "Constitutional documents of the Borrower.",
+          "category": "corporate_authorisations",
+          "responsible_party": "Borrower",
+          "qualifier": "Must be in form and substance satisfactory to the Lender before a Utilisation Request may be delivered.",
+          "source_refs": [
+            {
+              "location_type": "schedule",
+              "reference": "Schedule 1, paragraph 1(a)",
+              "title": "Borrower",
+              "page": 34,
+              "quote": "A copy of the constitutional documents of the Borrower"
+            }
+          ]
+        },
+        {
+          "description": "Board resolution approving the Agreement and transactions, authorising execution, and authorising signing/despatch of documents and notices.",
+          "category": "corporate_authorisations",
+          "responsible_party": "Borrower",
+          "qualifier": "Must be in form and substance satisfactory to the Lender before a Utilisation Request may be delivered.",
+          "source_refs": [
+            {
+              "location_type": "schedule",
+              "reference": "Schedule 1, paragraph 1(b)",
+              "title": "Borrower",
+              "page": 34,
+              "quote": "approving the terms of, and the transactions contemplated by, this Agreement"
+            }
+          ]
+        },
+        {
+          "description": "Specimen signature of each authorised person.",
+          "category": "corporate_authorisations",
+          "responsible_party": "Borrower",
+          "qualifier": "Must be in form and substance satisfactory to the Lender before a Utilisation Request may be delivered.",
+          "source_refs": [
+            {
+              "location_type": "schedule",
+              "reference": "Schedule 1, paragraph 1(c)",
+              "title": "Borrower",
+              "page": 34,
+              "quote": "A specimen of the signature of each person authorised"
+            }
+          ]
+        },
+        {
+          "description": "Director certificate that borrowing or guaranteeing the Commitment would not exceed any borrowing, guaranteeing or similar limit binding on the Borrower.",
+          "category": "corporate_authorisations",
+          "responsible_party": "Borrower",
+          "qualifier": "Must be in form and substance satisfactory to the Lender before a Utilisation Request may be delivered.",
+          "source_refs": [
+            {
+              "location_type": "schedule",
+              "reference": "Schedule 1, paragraph 1(d)",
+              "title": "Borrower",
+              "page": 34,
+              "quote": "would not cause any borrowing, guaranteeing or similar limit binding on the Borrower to be exceeded"
+            }
+          ]
+        },
+        {
+          "description": "Authorised signatory certificate that each copy document specified in Schedule 1 is correct, complete and in full force and effect as at a date no earlier than the date of the Agreement.",
+          "category": "corporate_authorisations",
+          "responsible_party": "Borrower",
+          "qualifier": "Must be in form and substance satisfactory to the Lender before a Utilisation Request may be delivered.",
+          "source_refs": [
+            {
+              "location_type": "schedule",
+              "reference": "Schedule 1, paragraph 1(e)",
+              "title": "Borrower",
+              "page": 34,
+              "quote": "is correct, complete and in full force and effect"
+            }
+          ]
+        },
+        {
+          "description": "Due authorisation and enforceability legal opinion of Linklaters LLP in customary form, as legal advisers to the Borrower in England.",
+          "category": "legal_opinions",
+          "responsible_party": "Borrower",
+          "qualifier": "Must be in form and substance satisfactory to the Lender before a Utilisation Request may be delivered.",
+          "source_refs": [
+            {
+              "location_type": "schedule",
+              "reference": "Schedule 1, paragraph 2",
+              "title": "Legal opinions",
+              "page": 34,
+              "quote": "A due authorisation and enforceability legal opinion of Linklaters LLP"
+            }
+          ]
+        }
+      ],
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 4.1",
+          "title": "Initial conditions precedent",
+          "page": 10,
+          "quote": "in form and substance satisfactory to the Lender"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 4.2",
+          "title": "Further conditions precedent",
+          "page": 10,
+          "quote": "no Default is continuing or would result from the proposed Loan"
+        }
+      ]
+    },
+    "representations": {
+      "clause_ref": "Clause 11 (Representations)",
+      "repeated_on": [
+        "agreement_date",
+        "other",
+        "interest_period_start"
+      ],
+      "materiality_qualifier": "Certain representations include materiality or Material Adverse Effect qualifiers; Repeating Representations are made on each Utilisation Request date and first day of each Interest Period.",
+      "items": [
+        {
+          "description": "Status, binding obligations, non-conflict, power and authority, validity and admissibility, governing law and enforcement, no filing or stamp taxes, insolvency, no default, no misleading information, pari passu ranking, no proceedings, and no breach of laws.",
+          "category": "other",
+          "source_refs": [
+            {
+              "location_type": "clause",
+              "reference": "Clause 11",
+              "title": "Representations",
+              "page": 17,
+              "quote": "The Borrower makes the representations and warranties set out in this Clause 11"
+            }
+          ]
+        }
+      ],
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 11.13",
+          "title": "Repetition",
+          "page": 18,
+          "quote": "on the date of each Utilisation Request and the first day of each Interest Period"
+        }
+      ]
+    },
+    "covenants_and_undertakings": {
+      "financial_covenants": [],
+      "information_undertakings": [
+        "Supply documents dispatched by the Borrower or any Group member to creditors generally or any class of them.",
+        "Promptly supply details of litigation, arbitration or administrative proceedings current, threatened or pending against any Group member which, if adversely determined, are reasonably likely to have a Material Adverse Effect.",
+        "Promptly supply details of judgments or orders against any Group member which are reasonably likely to have a Material Adverse Effect.",
+        "Promptly on request, provide further information regarding the financial condition, assets and operations of the Group as the Lender may reasonably request.",
+        "Notify the Lender of any Default and remedial steps promptly upon becoming aware of its occurrence; provide no-Default certificate on request."
+      ],
+      "general_undertakings": [
+        "Maintain required Authorisations for performance, legality, validity, enforceability and admissibility of the Agreement.",
+        "Comply in all respects with applicable laws where failure would materially impair ability to perform obligations under the Agreement.",
+        "No material change in the general nature of the business of the Borrower or Group taken as a whole from that carried on at the date of the Agreement.",
+        "Subject to express exclusions in the Change of Control definition, the Borrower must remain the ultimate holding company of the Group.",
+        "Negative pledge restricts Security and certain quasi-security arrangements subject to listed carve-outs.",
+        "Save for Financial Indebtedness between the Borrower and Group members, the Borrower must not incur or allow to remain outstanding Financial Indebtedness not existing at the date of the Agreement without prior Lender approval, not to be unreasonably withheld."
+      ],
+      "debt_restrictions": "Borrower may not incur or allow to remain outstanding new Financial Indebtedness, except Financial Indebtedness between it and members of the Group, without prior approval of the Lender not to be unreasonably withheld.",
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 12.1",
+          "title": "Information: miscellaneous",
+          "page": 19,
+          "quote": "such further information regarding the financial condition, assets and operations of the Group"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 13.4",
+          "title": "Change of business",
+          "page": 20,
+          "quote": "no material change is made to the general nature of the business"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 13.7",
+          "title": "Financial indebtedness",
+          "page": 21,
+          "quote": "without the prior approval of the Lender (not to be unreasonably withheld)"
+        }
+      ]
+    },
+    "events_of_default": {
+      "clause_ref": "Clause 14 (Events of Default)",
+      "events": [
+        {
+          "type": "payment_default",
+          "description": "Non-payment of amounts due under the Agreement, subject to administrative or technical error or Disruption Event carve-out and payment within 15 Business Days.",
+          "grace_period_days": 15,
+          "clause_ref": "Clause 14.1",
+          "heading": "Non-payment",
+          "source_refs": [
+            {
+              "location_type": "clause",
+              "reference": "Clause 14.1",
+              "title": "Non-payment",
+              "page": 21,
+              "quote": "payment is made within 15 Business Days of its due date"
+            }
+          ]
+        },
+        {
+          "type": "other_covenant_default",
+          "description": "Failure to comply with provisions of the Agreement other than non-payment, if capable of remedy and not remedied within 10 Business Days of notice or awareness.",
+          "grace_period_days": 10,
+          "clause_ref": "Clause 14.2",
+          "heading": "Other obligations",
+          "source_refs": [
+            {
+              "location_type": "clause",
+              "reference": "Clause 14.2",
+              "title": "Other obligations",
+              "page": 22,
+              "quote": "is remedied within 10 Business Days"
+            }
+          ]
+        },
+        {
+          "type": "misrepresentation",
+          "description": "Representation or statement made or deemed made by the Borrower in the Agreement or related delivered document is or proves incorrect or misleading in any material respect, with a stated 20 Business Day remedy period for capable matters.",
+          "grace_period_days": 20,
+          "clause_ref": "Clause 14.3",
+          "heading": "Misrepresentation",
+          "source_refs": [
+            {
+              "location_type": "clause",
+              "reference": "Clause 14.3",
+              "title": "Misrepresentation",
+              "page": 22,
+              "quote": "incorrect or misleading in any material respect"
+            }
+          ]
+        },
+        {
+          "type": "cross_default",
+          "description": "Cross default/cross acceleration/cancelled or suspended commitments for Group Financial Indebtedness, subject to aggregate £5,000,000 threshold.",
+          "threshold_amount": 5000000,
+          "threshold_currency": "GBP",
+          "clause_ref": "Clause 14.4",
+          "heading": "Cross default",
+          "source_refs": [
+            {
+              "location_type": "clause",
+              "reference": "Clause 14.4",
+              "title": "Cross default",
+              "page": 22,
+              "quote": "is less than £5,000,000"
+            }
+          ]
+        },
+        {
+          "type": "insolvency",
+          "description": "Insolvency, inability to pay debts, suspension of payments, financial-difficulty rescheduling negotiations, balance-sheet insolvency of the Borrower, or moratorium of Borrower indebtedness.",
+          "clause_ref": "Clause 14.5",
+          "heading": "Insolvency"
+        },
+        {
+          "type": "insolvency",
+          "description": "Insolvency proceedings or analogous steps, excluding frivolous or vexatious winding-up petitions discharged, stayed or dismissed within 30 days.",
+          "grace_period_days": 30,
+          "clause_ref": "Clause 14.6",
+          "heading": "Insolvency proceedings"
+        },
+        {
+          "type": "other",
+          "description": "Creditors' process affecting Borrower assets not discharged within five Business Days.",
+          "grace_period_days": 5,
+          "clause_ref": "Clause 14.7",
+          "heading": "Creditors' process"
+        },
+        {
+          "type": "illegality",
+          "description": "It is or becomes unlawful for the Borrower to perform obligations under the Agreement.",
+          "clause_ref": "Clause 14.8",
+          "heading": "Unlawfulness"
+        },
+        {
+          "type": "material_adverse_change",
+          "description": "Any event or circumstance which in the reasonable opinion of the Lender constitutes a Material Adverse Effect.",
+          "clause_ref": "Clause 14.9",
+          "heading": "Material adverse change"
+        },
+        {
+          "type": "other",
+          "description": "Borrower repudiates the Agreement or evidences an intention to repudiate it.",
+          "clause_ref": "Clause 14.10",
+          "heading": "Repudiation"
+        }
+      ],
+      "acceleration_and_enforcement_rights": "On and at any time after a continuing Event of Default, the Lender may cancel the Available Commitment, declare all or part of the Loans and accrued/outstanding amounts immediately due and payable, and/or declare all or part of the Loans payable on demand.",
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 14",
+          "title": "Events of Default",
+          "page": 21,
+          "quote": "Each of the events or circumstances set out in Clause 14 is an Event of Default"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 14.11",
+          "title": "Acceleration",
+          "page": 23,
+          "quote": "declare that all or part of the Loans, together with accrued interest"
+        }
+      ]
+    },
+    "prepayment_and_cancellation": {
+      "voluntary_prepayment_permitted": true,
+      "mandatory_prepayment_triggers": [
+        {
+          "type": "change_of_control",
+          "description": "On a Change of Control, the Lender may on not less than 10 days' notice cancel the Available Commitment and declare all Loans and other accrued/outstanding amounts immediately due and payable.",
+          "clause_ref": "Clause 7.1"
+        },
+        {
+          "type": "other",
+          "description": "At the Lender's request, giving not less than 180 days' prior written notice, the Borrower must prepay the whole or any part of any Loan.",
+          "clause_ref": "Clause 7.4"
+        }
+      ],
+      "cancellation_events": [
+        {
+          "type": "change_of_control",
+          "description": "Change of Control permits cancellation of Available Commitment and cessation of further utilisation.",
+          "clause_ref": "Clause 7.1"
+        }
+      ],
+      "change_of_control": "Change of Control includes a person or persons acting in concert, other than a holding company with substantially similar shareholders to the pre-existing shareholders of the Borrower, becoming interested in more than 50% of issued/allotted ordinary share capital or voting rights of the Borrower.",
+      "notice_days": 5,
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 7.2",
+          "title": "Voluntary cancellation",
+          "page": 12,
+          "quote": "not less than five Business Days' prior notice"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 7.3",
+          "title": "Voluntary prepayment of Loans",
+          "page": 12,
+          "quote": "prepay the whole or any part of any Loan"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 7.5",
+          "title": "Restrictions",
+          "page": 12,
+          "quote": "without premium or penalty"
+        }
+      ]
+    },
+    "transfers_and_assignments": {
+      "transfers_clause_ref": "Clause 15 (Changes to the Lender); Clause 16 (Changes to the Borrower)",
+      "assignment_permitted": true,
+      "transfer_permitted": true,
+      "novation_required": true,
+      "borrower_consent_required": true,
+      "borrower_consent_exceptions": [
+        "Borrower consent is not required for an assignment or transfer made at a time when an Event of Default is continuing."
+      ],
+      "permitted_transferees": [
+        "another bank or financial institution",
+        "a trust, fund or other entity which is regularly engaged in or established for the purpose of making, purchasing or investing in loans, securities or other financial assets"
+      ],
+      "disclosure_to_potential_transferees": "Confidential Information may be disclosed to potential assignees/transferees and related persons subject to the confidentiality conditions in Clause 26.2.",
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 15.1",
+          "title": "Assignments and transfers by the Lender",
+          "page": 24,
+          "quote": "assign any of its rights"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 15.2",
+          "title": "Borrower consent",
+          "page": 24,
+          "quote": "The consent of the Borrower (not to be unreasonably withheld) is required"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 16",
+          "title": "Changes to the Borrower",
+          "page": 24,
+          "quote": "The Borrower may not assign any of its rights or transfer any of its rights or obligations"
+        }
+      ]
+    },
+    "notice_mechanics": {
+      "notices_clause_ref": "Clause 20 (Notices)",
+      "permitted_methods": [
+        "post",
+        "fax",
+        "email",
+        "electronic_platform",
+        "other"
+      ],
+      "deemed_delivery_rules": [
+        "Fax communications by the Lender are effective when received in legible form.",
+        "Letters by the Lender are effective when left at the relevant address or five Business Days after being deposited in the post postage prepaid in an addressed envelope.",
+        "Communications to the Lender are effective only when actually received and marked for the attention of the identified department or officer.",
+        "Communications becoming effective after 5.00 p.m. in the place of receipt are deemed effective on the following day."
+      ],
+      "language": "English",
+      "electronic_communications_permitted": true,
+      "change_of_details_mechanics": "A Party may notify substitute address, fax number, department or officer by not less than five Business Days' notice.",
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 20.1",
+          "title": "Communications in writing",
+          "page": 27,
+          "quote": "may be made by fax or letter"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 20.4",
+          "title": "Electronic communication",
+          "page": 28,
+          "quote": "may be made or delivered by electronic mail or other electronic means"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 20.5",
+          "title": "English language",
+          "page": 29,
+          "quote": "Any notice given under or in connection with this Agreement must be in English"
+        }
+      ]
+    },
+    "fees_and_expenses": {
+      "fees": [
+        {
+          "type": "legal_or_preparation_costs",
+          "payable_to": "Lender",
+          "description": "Borrower must promptly on demand pay the Lender all costs and expenses, including legal fees, reasonably incurred in connection with negotiation, preparation, printing and execution of the Agreement and other referred documents."
+        },
+        {
+          "type": "other",
+          "payable_to": "Lender",
+          "description": "Borrower must reimburse amendment, waiver or consent request costs within three Business Days of demand."
+        },
+        {
+          "type": "other",
+          "payable_to": "Lender",
+          "description": "Borrower must pay enforcement or preservation costs and expenses within three Business Days of demand."
+        }
+      ],
+      "lender_preparation_costs": "Transaction expenses, amendment costs and enforcement costs are payable by the Borrower to the Lender as specified in Clause 10.",
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 10.1",
+          "title": "Transaction expenses",
+          "page": 16,
+          "quote": "reasonably incurred by it in connection with the negotiation, preparation, printing and execution"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 10.3",
+          "title": "Enforcement costs",
+          "page": 16,
+          "quote": "in connection with the enforcement of, or the preservation of any rights"
+        }
+      ]
+    },
+    "tax_and_withholding": {
+      "withholding_tax_provisions": "Tax is defined, but the extracted facility text does not include a standalone tax gross-up clause; payments mechanics require Borrower payments without set-off or counterclaim.",
+      "source_refs": [
+        {
+          "location_type": "definition",
+          "reference": "Definition of Tax",
+          "page": 8,
+          "quote": "\"Tax\" means any tax, levy, impost, duty or other charge or withholding"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 18.5",
+          "title": "No set-off by the Borrower",
+          "page": 26,
+          "quote": "without (and free and clear of any deduction for) set-off or counterclaim"
+        }
+      ]
+    },
+    "reporting_and_information": {
+      "event_notice_requirements": [
+        "Prompt notice to the Lender of any Default and steps being taken to remedy it upon the Borrower becoming aware.",
+        "Prompt details of material litigation, arbitration or administrative proceedings and material judgments/orders against Group members.",
+        "Prompt notice to the Lender upon the Company becoming aware of a Change of Control."
+      ],
+      "source_refs": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 12.2",
+          "title": "Notification of default",
+          "page": 19,
+          "quote": "promptly upon becoming aware of its occurrence"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 7.1",
+          "title": "Change of control",
+          "page": 12,
+          "quote": "The Company shall promptly notify the Lender upon becoming aware of that event"
+        }
+      ]
+    },
+    "operational_servicing_calendar": {
+      "calendar_basis": "London Business Days; periods are adjusted according to the Month and payment Business Day conventions in the Agreement.",
+      "business_day_definition": "A day, other than Saturday or Sunday, on which banks are open for general business in London.",
+      "events": [
+        {
+          "event_type": "availability_end",
+          "description": "Availability Period ends 12 Months after the date of the Agreement; unutilised Commitment is cancelled at the end of the Availability Period.",
+          "date_rule": "12 Months after the date of the Agreement",
+          "frequency": "one_off",
+          "responsible_party": "Borrower/Lender"
+        },
+        {
+          "event_type": "utilisation_request_deadline",
+          "description": "First Utilisation Date with utilisation not exceeding £15,000,000: Utilisation Request due by 10:00 a.m. seven days before the First Utilisation Date.",
+          "date_rule": "10:00 a.m. seven days before the First Utilisation Date",
+          "frequency": "one_off",
+          "responsible_party": "Borrower",
+          "recipient": "Lender"
+        },
+        {
+          "event_type": "utilisation_request_deadline",
+          "description": "Following Utilisation Dates, or First Utilisation Date where amount exceeds £15,000,000: Utilisation Request due by 10:00 a.m. thirty days before the Utilisation Date.",
+          "date_rule": "10:00 a.m. thirty days before the Utilisation Date",
+          "frequency": "other",
+          "responsible_party": "Borrower",
+          "recipient": "Lender"
+        },
+        {
+          "event_type": "maturity_date",
+          "description": "Each Loan is repayable on the Termination Date.",
+          "date_rule": "Three years after the date of the first Utilisation Request or such other date agreed by the Lender and Borrower in writing",
+          "frequency": "one_off",
+          "responsible_party": "Borrower",
+          "recipient": "Lender"
+        }
+      ],
+      "generated_from_fields": [
+        "optional_blocks.availability_and_utilisation",
+        "optional_blocks.repayment_and_maturity",
+        "optional_blocks.interest_terms"
+      ],
+      "manual_review_required": true,
+      "manual_review_reason": "The Agreement date and first Utilisation Request date are blank/not specified in the extracted text, so exact calendar dates cannot be computed.",
+      "source_refs": [
+        {
+          "location_type": "definition",
+          "reference": "Definition of Month",
+          "page": 7,
+          "quote": "if the numerically corresponding day is not a Business Day"
+        }
+      ]
+    },
+    "clause_and_schedule_references": {
+      "conditions_precedent_schedule_ref": "Schedule 1 (Conditions precedent)",
+      "events_of_default_clause_ref": "Clause 14 (Events of Default)",
+      "representations_clause_ref": "Clause 11 (Representations)",
+      "undertakings_clause_ref": "Clauses 12 (Information Undertakings) and 13 (General undertakings)",
+      "governing_law_clause_ref": "Clause 28 (Governing law)",
+      "jurisdiction_clause_ref": "Clause 29 (Enforcement)",
+      "other_references": [
+        {
+          "location_type": "clause",
+          "reference": "Clause 2",
+          "title": "The Facility",
+          "page": 10,
+          "quote": "Subject to the terms of this Agreement"
+        },
+        {
+          "location_type": "clause",
+          "reference": "Clause 8",
+          "title": "Interest",
+          "page": 14,
+          "quote": "The rate of interest on each Loan"
+        },
+        {
+          "location_type": "schedule",
+          "reference": "Schedule 2",
+          "title": "Requests",
+          "page": 35,
+          "quote": "This is a Utilisation Request"
+        }
+      ]
+    }
+  },
+  "source_trace": {
+    "source_document": "docs/06_facility_dignity_phoenix_facility_agreement.pdf",
+    "source_text_path": "data/06_facility_dignity_phoenix_facility_agreement.json.source.txt",
+    "source_text_char_count": 75568,
+    "extraction_method": "pdf_direct",
+    "extraction_notes": [
+      "PDF text was extracted directly with extract_pdf_text and used as the source for this facility-level extraction.",
+      "The agreement date line is blank in the extracted text; document_date uses the visible 6 December 2022 footer/reference date rather than a completed agreement date.",
+      "No agent, arranger, guarantor or security trustee is identified in the extracted agreement."
+    ],
+    "known_omissions": [
+      "Signature block addresses/fax/attention fields appear incomplete or blank in extracted page 37 and are not normalised except for named parties."
+    ]
+  }
+}

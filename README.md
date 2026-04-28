@@ -48,7 +48,7 @@ I had the TUI agent build up and run the command on different docs several times
 
 > Note: the schemas that were built up have not been human inspected, but are based on a core set of fields and then optional blocks addressing different concerns, e.g. collateral block.
 
-Total time for POC project: 2.5 years
+Total time for POC project: 2.5 hours
 Tokens used: ~600-800k
 Equivalent api cost: ~ $80. (but I don't use Opus, Gpt api. Have subscriptions instead).
 
@@ -542,4 +542,23 @@ It does **not** vendor `validation-lib` or depend on a generic validation-logic 
 doc-extraction owns the extraction domain and rules.
 validation-lib owns the generic validation engine.
 Pi provides the agent harness and tool surface.
+```
+
+
+## Another example command
+
+```bash
+pi \
+  --mode json \
+  --model openai-codex/gpt-5.5 \
+  --thinking medium \
+  --session-dir .pi/headless-sessions \
+  --no-extensions \
+  --extension ./extensions/pdf/index.ts \
+  --no-skills \
+  --no-prompt-templates \
+  --tools read,write,grep,find,ls,extract_pdf_text \
+  "Read docs/agm_report.pdf. First use extract_pdf_text and write the extracted text to data/agm_report.pdf.source.txt. Then answer this question: which are the detailed legal entity hierarchy changes detailed in this document? Focus on legal entity names, parent/subsidiary relationships, mergers, acquisitions, disposals, reorganisations, incorporations, liquidations, renamings, jurisdiction changes, and effective dates. Write the answer to data/agm_report_legal_entity_hierarchy_changes.md with concise evidence snippets/page references where available." \
+  > .pi/headless-runs/agm-report-entity-hierarchy.jsonl \
+  2> .pi/headless-runs/agm-report-entity-hierarchy.stderr
 ```

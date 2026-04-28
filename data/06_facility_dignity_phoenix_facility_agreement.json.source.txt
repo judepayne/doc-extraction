@@ -1,0 +1,1289 @@
+===== PAGE 1 =====
+EXECUTION VERSION 
+  
+  
+ 
+ 
+   
+ 
+£50,000,000 
+ 
+ 
+Facility agreement 
+ 
+   
+ 
+Dated _____________ 
+ 
+  
+for 
+ 
+DIGNITY PLC 
+as Borrower 
+ 
+ 
+with 
+ 
+PHOENIX UK FUND LTD 
+acting as Lender 
+ 
+ Ref:  L-317135  
+6 December 2022
+
+===== PAGE 2 =====
+EXECUTION VERSION 
+  
+  
+ 
+ 
+CONTENTS 
+CLAUSE PAGE 
+SECTION 1 
+INTERPRETATION 
+1. Definitions and interpretation  .....................................................................................................1 
+SECTION 2 
+THE FACILITY 
+2. The Facility ................................................................................................................................ 7 
+3. Purpose...................................................................................................................................... 7 
+4. Conditions of Utilisation  ............................................................................................................. 7 
+SECTION 3 
+UTILISATION 
+5. Utilisation ................................................................................................................................... 8 
+SECTION 4 
+REPAYMENT, PREPAYMENT AND CANCELLATION 
+6. Repayment ................................................................................................................................ 9 
+7. Prepayment and cancellation  .................................................................................................... 9 
+SECTION 5 
+COSTS OF UTILISATION 
+8. Interest ..................................................................................................................................... 11 
+9. Interest Periods  ........................................................................................................................ 11 
+SECTION 6 
+ADDITIONAL PAYMENT OBLIGATIONS 
+10. Costs and expenses  ................................................................................................................ 13 
+SECTION 7 
+REPRESENTATIONS, UNDERTAKINGS AND EVENTS OF DEFAULT 
+11. Representations  .......................................................................................................................14 
+12. Information Undertakings  ........................................................................................................ 16 
+13. General undertakings  .............................................................................................................. 16 
+14. Events of Default  ..................................................................................................................... 18 
+SECTION 8 
+CHANGES TO PARTIES 
+15. Changes to the Lender  ............................................................................................................ 21 
+16. Changes to the Borrower  .........................................................................................................21 
+SECTION 9 
+THE LENDER 
+17. Conduct of business by the Lender  .........................................................................................22 
+SECTION 10 
+ADMINISTRATION 
+18. Payment mechanics  ................................................................................................................ 23 
+19. Set-off ...................................................................................................................................... 24 
+20. Notices ..................................................................................................................................... 24 
+21. Calculations and certificates  ....................................................................................................26 
+22. Indemnity ................................................................................................................................. 26 
+23. Partial invalidity  ........................................................................................................................26 
+
+===== PAGE 3 =====
+   
+24. Remedies and waivers  ............................................................................................................ 27 
+25. Amendments and waivers  ....................................................................................................... 27 
+26. Confidential Information  ...........................................................................................................27 
+27. Counterparts  ............................................................................................................................ 29 
+SECTION 11 
+GOVERNING LAW AND ENFORCEMENT 
+28. Governing law  .......................................................................................................................... 30 
+29. Enforcement ............................................................................................................................ 30 
+THE SCHEDULES 
+SCHEDULE PAGE 
+SCHEDULE 1 Conditions precedent  ....................................................................................................... 31 
+SCHEDULE 2 Requests  ...........................................................................................................................32 
+ 
+
+===== PAGE 4 =====
+  
+  
+ 
+1 
+ 
+THIS AGREEMENT is dated  ______________ and made between:  
+(1) DIGNITY PLC (the "Company") and as borrower (the " Borrower"); and 
+(2) PHOENIX UK FUND LTD. as lender (the " Lender"). 
+ 
+IT IS AGREED as follows:  
+SECTION 1 
+INTERPRETATION 
+1. DEFINITIONS AND INTERPRETATION 
+1.1 Definitions 
+In this Agreement: 
+"Accounting Principles " means generally accepted accounting principles in England, including 
+IFRS. 
+"Affiliate" means, in relation to any person, a Subsidiary of that person or a Holding Company of 
+that person or any other Subsidiary of that Holding Company.  
+"Authorisation" means an authorisation, consent, approval, resolution, licence, exemption, filing, 
+notarisation or registration.  
+"Availability Period " means the period from and including the date of this Agreement to and 
+including the date which is 12 Months after the date of this Agreement.  
+"Available Commitment" means the Lender's Commitment minus:  
+(a) the Base Currency Amount of any outstanding Loans; and  
+(b) in relation to any proposed Utilisation, the Base Currency Amount of any Loans that are due 
+to be made on or before the proposed Utilisation Date.  
+"Base Currency" means sterling.  
+"Base Currency Amount " means, in relation to a Loan, the amount specified in the Utilisation 
+Request delivered by the Borrower for that Loan as adjusted to reflect any repayment (other than a 
+repayment arising from a change of currency), prepayment, consolidation or division of a Loan.  
+"Business Day " means a day (other than a Saturday or Sunday) on which banks are open for 
+general business in London.  
+"Change of Control" means the  occurrence of  an  event  whereby  any  person  or  any  persons  
+acting  in concert  (as  defined  in  the  City  Code  on  Takeovers  and  Mergers),  other  than  a  
+holding  company  (as defined in Section  1159  of  the  Companies Act  2006 as amended)  whose  
+shareholders are  or are to be substantially  similar to  the pre-existing shareholders of the  Borrower,  
+shall become  interested (within the meaning of Part 22 of the Companies Act 2006 as amended) 
+in (A) more than 50 per cent. of the issued or allotted ordinary share capital of the Borrower or (B) 
+shares in the capital of the Borrower carrying more than 50 per cent. of the voting rights normally 
+exercisable at a general meeting of the Borrower.  
+ 
+6 December 2022
+
+===== PAGE 5 =====
+2 
+ 
+"Commitment" means £50,000,000 to the extent not cancelled, reduced or transferred by the 
+Lender under this Agreement.  
+"Confidential Information " means all information relating to the Company, the Group this 
+Agreement or the Facility of which the Lender becomes aware in its capacity as, or for the purpose 
+of becoming, the Lender or which is received by the Lender in relation to, or for the purpose of 
+becoming a Lender under this Agreement or the Facility from either:  
+(a) any member of the Group or any of its advisers; or  
+(b) a Lender, if the information was obtained by such Lender directly or indirectly from any 
+member of the Group or any of its advisers,  
+in whatever form, and includes information given orally and any document, electronic file or 
+any other way of representing or recording information which contains or is derived or copied 
+from such information but excludes:  
+(i) information that:  
+(A) is or becomes public information other than as a direct or indirect result of any 
+breach by the Lender of Clause 26 (Confidential Information );  
+(B) is identified in writing at the time of delivery as non-confidential by any member 
+of the Group or any of its advisers; or  
+(C) is known by the Lender before the date the information is disclosed to it in 
+accordance with paragraphs (a) or (b) above or is lawfully obtained by the 
+Lender after that date, from a source which is, as far as the Lender is aware, 
+unconnected with the Group and which, in either case, as far as the Lender is 
+aware, has not been obtained in breach of, and is not otherwise subject to, any 
+obligation of confidentiality.  
+"Confidentiality Undertaking" means a confidentiality undertaking substantially in a recommended 
+form of the LMA or in any other form agreed between the Company and the Lender.  
+"Default" means an Event of Default or any event or circumstance specified in Clause 14 (Events 
+of Default ) which would (with the expiry of a grace period, the giving of notice, the making of any 
+determination under this Agreement or any combination of any of the foregoing) be an Event of 
+Default. 
+"Disruption Event" means either or both of:  
+(a) a material disruption to those payment or communications systems or to those financial 
+markets which are, in each case, required to operate in order for payments to be made in 
+connection with the Facility (or otherwise in order for the transactions contemplated by this 
+Agreement to be carried out) which disruption is not caused by, and is beyond the control 
+of, any of the Parties; or  
+(b) the occurrence of any other event which results in a disruption (of a technical or systems-
+related nature) to the treasury or payments operations of a Party preventing that, or any 
+other Party: 
+(i) from performing its payment obligations under this Agreement; or  
+
+===== PAGE 6 =====
+3 
+ 
+(ii) from communicating with other Parties in accordance with the terms of this 
+Agreement, 
+and which (in either such case) is not caused by, and is beyond the control of, the Party whose 
+operations are disrupted.  
+"Event of Default " means any event or circumstance specified as such in Clause 14 (Events of 
+Default). 
+"Facility" means the term loan facility made available under this Agreement as described in Clause 
+2 (The Facility). 
+"Facility Office" means the office or offices notified by the Lender to the Borrower in writing as the 
+office or offices through which it will perform its obligations under this Agreement.  
+"Finance Lease " means any lease or hire purchase contract, a liability under which would, in 
+accordance with the Accounting Principles, be treated as a balance sheet liability.  
+"Financial Indebtedness" means any indebtedness for or in respect of:  
+(a) moneys borrowed and debit balances at banks or other financial institutions;  
+(b) any acceptance under any acceptance credit or bill discounting facility (or dematerialised 
+equivalent); 
+(c) any note purchase facility or the issue of bonds, notes, debentures, loan stock or any similar 
+instrument; 
+(d) the amount of any liability in respect of Finance Leases;  
+(e) receivables sold or discounted (other than any receivables to the extent they are sold on a 
+non-recourse basis);  
+(f) any Treasury Transaction (and, when calculating the value of that Treasury Transaction, 
+only the marked to market value (or, if any actual amount is due as a result of the termination 
+or close-out of that Treasury Transaction, that amount) shall be taken into account);  
+(g) any counter-indemnity obligation in respect of a guarantee, bond, standby or documentary 
+letter of credit or any other instrument issued by a bank or financial institution in respect of 
+an underlying liability of an entity which is not a member of the Group which liability would 
+fall within one of the other paragraphs  of this definition;  
+(h) any amount raised by the issue of shares which are redeemable (other than at the option 
+of the issuer) before the Termination Date or are otherwise classified as borrowings under 
+the Accounting Principles;  
+(i) any amount of any liability under an advance or deferred purchase agreement if (i) one of 
+the primary reasons behind entering into the agreement is to raise finance or to finance the 
+acquisition or construction of the asset or service in question or (ii) the agreement is in 
+respect of the supply of assets or services and payment is due more than 10 days after the 
+date of supply;  
+(j) any amount raised under any other transaction (including any forward sale or purchase, 
+sale and sale back or sale and leaseback agreement) having the commercial effect of a 
+borrowing; and  
+
+===== PAGE 7 =====
+4 
+ 
+(k) the amount of any liability in respect of any guarantee for any of the items referred to in 
+paragraphs (a) to (j) above 
+“First Utilisation Date ” means the date specified as the Utilisation Date in the first Utilisation 
+Request submitted after the date of this Agreement.  
+"Group" means the Borrower and its Subsidiaries from time to time.  
+"Holding Company " means, in relation to a person, any other person in respect of which it is a 
+Subsidiary. 
+"Interest Period" means, in relation to a Loan, each period determined in accordance with Clause 
+9 (Interest Periods ). 
+“Interest Rate” means seven per cent..  
+"LMA" means the Loan Market Association.  
+"Loan" means a loan made or to be made under the Facility or the principal amount outstanding for 
+the time being of that loan.  
+"Material Adverse Effect" means a material adverse effect on or material adverse change in:  
+(a) the financial condition of the Borrower, such that the Borrower would be unable to meet its 
+payment obligations under this Agreement as they fall due;  
+(b) the ability of the Borrower to perform and comply with its obligations under this Agreement; 
+or 
+(c) the validity, legality or enforceability of this Agreement.  
+"Month" means a period starting on one day in a calendar month and ending on the numerically 
+corresponding day in the next calendar month, except that:  
+(a) if the numerically corresponding day is not a Business Day, that period shall end on the next 
+Business Day in that calendar month in which that period is to end if there is one, or if there 
+is not, on the immediately preceding Business Day; and  
+(b) if there is no numerically corresponding day in the calendar month in which that period is to 
+end, that period shall end on the last Business Day in that calendar month.  
+The above rules will only apply to the last Month of any period.  
+"New Lender" has the meaning given to that term in Clause 15 (Changes to the Lender ). 
+"Party" means a party to this Agreement.  
+"Related Fund" in relation to a fund (the " first fund"), means a fund which is managed or advised 
+by the same investment manager or investment adviser as the first fund or, if it is managed by a 
+different investment manager or investment adviser, a fund whose investment manager or 
+investment adviser is an Affiliate of the investment manager or investment adviser of the first fund.  
+"Relevant Market" means the London interbank market.  
+"Repeating Representations" means each of the representations set out in Clauses 11.1 (Status) 
+to 11.4 (Power and authority ), 11.6 (Governing law and enforcement ), 11.8 (No default) and  11.12 
+(No proceedings pending or threatened ). 
+
+===== PAGE 8 =====
+5 
+ 
+"Representative" means any delegate, agent, manager, administrator, nominee, attorney, trustee 
+or custodian. 
+"Security" means a mortgage, charge, pledge, lien or other security interest securing any obligation 
+of any person or any other agreement or arrangement having a similar effect.  
+"Selection Notice " means a notice substantially in the form set out in Part II  of Schedule 2  
+(Requests) given in accordance with Clause 9 (Interest Periods ). 
+"Subsidiary" means a subsidiary within the meaning of section 1159 of the Companies Act 2006..  
+"Tax" means any tax, levy, impost, duty or other charge or withholding of a similar nature (including 
+any penalty or interest payable in connection with any failure to pay or any delay in paying any of 
+the same). 
+"Termination Date" means (i) the date which is three years after the date of the first Utilisation 
+Request or (ii) such other date as is agreed between the Lender and the Borrower in writing.  
+"Treasury Transactions " means any derivative transaction entered into in connection with 
+protection against or benefit from fluctuation in any rate or price.  
+"Unpaid Sum " means any sum due and payable but unpaid by the Borrower under this 
+Agreement."Utilisation" means a utilisation of the Facility.  
+"Utilisation Date" means the date of a Utilisation, being the date on which the relevant Loan is to 
+be made. 
+"Utilisation Request " means a notice substantially in the form set out in Part I  of Schedule 2  
+(Requests). 
+1.2 Construction 
+(a) Unless a contrary indication appears, any reference in this Agreement to:  
+(i) the " Lender", or any " Party" shall be construed so as to include its successors in title, 
+permitted assigns and permitted transferees to, or of, its rights and/or obligations under this 
+Agreement; 
+(ii) "assets" includes present and future properties, revenues and rights of every description;  
+(iii) "this Agreement" is a reference to this Agreement or other agreement or instrument as 
+amended, novated, supplemented, extended, restated  (however fundamentally and whether 
+or not more onerously) or replaced and includes any change in the purpose of, any extension of 
+or any increase in any facility or the addition of any new facility under this Agreement or other 
+agreement or instrument; 
+(iv) "indebtedness" includes any obligation (whether incurred as principal or as surety) for the 
+payment or repayment of money, whether present or future, actual or contingent;  
+(v) a "person" includes any individual, firm, company, corporation, government, state or agency 
+of a state or any association, trust, joint venture, consortium, partnership or other entity 
+(whether or not having separate legal personality);  
+(vi) a "regulation" includes any regulation, rule, official directive, request or guideline (whether 
+or not having the force of law) of any governmental, intergovernmental or supranational 
+
+===== PAGE 9 =====
+6 
+ 
+body, agency, department or of any regulatory, self-regulatory or other authority or 
+organisation; 
+(vii) a provision of law is a reference to that provision as amended or re-enacted from time to 
+time; and 
+(viii) a time of day is a reference to London time.  
+(b) The determination of the extent to which a rate is " for a period equal in length " to an Interest 
+Period shall disregard any inconsistency arising from the last day of that Interest Period being 
+determined pursuant to the terms of this Agreement.  
+(c) Section, Clause and Schedule headings are for ease of reference only.  
+(d) A Default (other than an Event of Default) is " continuing" if it has not been remedied or waived and 
+an Event of Default is " continuing" if it has not been waived.  
+1.3 Currency symbols and definitions 
+"£", "GBP" and "sterling" denote the lawful currency of the United Kingdom.  
+1.4 Third party rights 
+A person who is not a Party has no right under the Contracts (Rights of Third Parties) Act 1999 to 
+enforce or to enjoy the benefit of any term of this Agreement.  
+
+===== PAGE 10 =====
+7 
+ 
+SECTION 2 
+THE FACILITY 
+2. THE FACILITY 
+Subject to the terms of this Agreement, the Lender makes available to the Borrower a sterling term 
+loan facility in an amount equal to the Commitment.  
+3. PURPOSE 
+3.1 Purpose 
+The Borrower shall apply all amounts borrowed by it under the Facility towards the provision of 
+equity support to its whole business securitisation through share subscription and/or subordinated 
+debt. 
+3.2 Monitoring 
+The Lender is not bound to monitor or verify the application of any amount borrowed pursuant to 
+this Agreement. 
+4. CONDITIONS OF UTILISATION 
+4.1 Initial conditions precedent 
+The Borrower may not deliver a Utilisation Request unless the Lender has received all of the 
+documents and other evidence listed in Schedule 1 (Conditions precedent ) in form and substance 
+satisfactory to the Lender. The Lender shall notify the Borrower promptly upon, and in any event 
+within five Business Days of, being so satisfied.  
+4.2 Further conditions precedent 
+The Lender will only be obliged to comply with Clause 5.4 (Availability of Loans ) if on the date of 
+the Utilisation Request and on the proposed Utilisation Date:  
+(i) no Default is continuing or would result from the proposed Loan; and  
+(ii) the Repeating Representations to be made by the Borrower are true in all material respects.  
+4.3 Maximum number of Loans 
+(a) The Borrower may not deliver a Utilisation Request if as a result of the proposed Utilisation more 
+than five Loans would be outstanding.  
+(b) The Borrower may not request that a Loan be divided if, as a result of the proposed division, more 
+than five Loans would be outstanding.  
+
+===== PAGE 11 =====
+8 
+ 
+SECTION 3 
+UTILISATION 
+5. UTILISATION 
+5.1 Delivery of a Utilisation Request 
+The Borrower may utilise the Facility by delivery to the Lender of a duly completed Utilisation 
+Request substantially in the form set out in Part II of Schedule 2 (Requests):  
+(a) In respect of the First Utilisation Date, provided that the amount of the Utilisation does not exceed 
+£15,000,000, not later than 10:00 a.m. seven days before the First Utilisation Date; and  
+(b) In respect of each Utilisation Date following the First Utilisation Date, or where the amount of the 
+Utilisation on the First Utilisation Date exceeds £15,000,000, not later than 10:00 a.m. thirty days 
+before the Utilisation Date.  
+5.2 Completion of a Utilisation Request 
+(a) Each Utilisation Request is irrevocable and will not be regarded as having been duly completed 
+unless: 
+(i) the proposed Utilisation Date is a Business Day within the Availability Period;  
+(ii) the currency and amount of the Utilisation comply with Clause 5.3 (Currency and amount );  
+(iii) the proposed Interest Period complies with Clause 9 (Interest Periods ); and 
+(iv) it specifies the account and bank (which must be in the principal financial centre of the 
+country of the currency of the Utilisation) to which the proceeds of the Utilisation are to be 
+credited. 
+(b) Only one Loan may be requested in each Utilisation Request.  
+5.3 Currency and amount 
+(a) The currency specified in a Utilisation Request must be the Base Currency.  
+(b) The amount of the proposed Loan must be:  
+(i) if the currency selected is the Base Currency, a minimum of £10,000,000 or, if less, the 
+Available Commitment; and  
+(ii) in any event such that its Base Currency Amount is less than or equal to the Available 
+Commitment. 
+5.4 Availability of Loans 
+If the conditions set out in this Agreement have been met, the Lender shall make each Loan 
+available by the Utilisation Date through its Facility Office.  
+5.5 Cancellation of Commitment 
+The Commitment which, at that time, is not utilised shall be immediately cancelled at the end of the 
+Availability Period.  
+ 
+SECTION 4 
+
+===== PAGE 12 =====
+9 
+ 
+REPAYMENT, PREPAYMENT AND CANCELLATION 
+6. REPAYMENT 
+6.1 Repayment of Loans 
+The Borrower shall repay each Loan on the Termination Date.  
+6.2 Reborrowing 
+The Borrower may not reborrow any part of the Facility which is repaid.  
+7. PREPAYMENT AND CANCELLATION 
+7.1 Change of control  
+Upon the occurrence of a Change of Control:  
+(a) the Company shall promptly notify the Lender upon becoming aware of that event;  
+(b) the Lender shall not be obliged to fund a Utilisation; and  
+(c) the Lender may, by not less than 10 days' notice to the Company, cancel the Available Commitment 
+and declare all Loans, together with accrued interest, and all other amounts accrued or outstanding 
+under this Agreement immediately due and payable, whereupon the Available Commitment will be 
+immediately cancelled, the Facility shall immediately cease to be available for further utilisation and 
+all such Loans, accrued interest and other amounts shall become immediately due and payable.  
+7.2 Voluntary cancellation 
+The Borrower may, if it gives the Lender not less than five Business Days' prior notice, cancel the 
+whole or any part of the Available Commitment.  
+7.3 Voluntary prepayment of Loans 
+(a) The Borrower may, if it gives the Lender not less than five Business Days' prior notice, prepay the 
+whole or any part of any Loan.  
+(b) Subject to Clause 7.3(a), a Loan may be prepaid at any time after the Utilisation Date in respect of 
+that Loan. 
+7.4 Mandatory prepayment at the request of the Lender 
+At the Lender’s request, giving not less than 180 days’ prior notice in writing of such request, the 
+Borrower must prepay the whole or any part of any Loan.  
+7.5 Restrictions 
+(a) Any notice of cancellation or prepayment given by any Party under this Clause 7 shall be irrevocable 
+and, unless a contrary indication appears in this Agreement, shall specify the date or dates upon 
+which the relevant cancellation or prepayment is to be made and the amount of that cancellation or 
+prepayment. 
+(b) Any prepayment under this Agreement shall be made together with accrued interest on the amount 
+prepaid and without premium or penalty.  
+(c) The Borrower may not reborrow any part of the Facility which is prepaid.  
+(d) The Borrower shall not repay or prepay all or any part of the Loans or cancel all or any part of the 
+Commitment except at the times and in the manner expressly provided for in this Agreement.  
+(e) No amount of the Commitment cancelled under this Agreement may be subsequently reinstated.  
+
+===== PAGE 13 =====
+10 
+ 
+(f) If all or part of a Loan under the Facility is repaid or prepaid and is not available for redrawing (other 
+than by operation of Clause 4.2 ( Further conditions precedent )), an amount of the Commitment 
+(equal to the Base Currency Amount of the amount of the Loan which is repaid or prepaid) will be 
+deemed to be cancelled on the date of repayment or prepayment.  
+
+===== PAGE 14 =====
+11 
+ 
+SECTION 5 
+COSTS OF UTILISATION 
+8. INTEREST 
+8.1 Calculation of interest 
+The rate of interest on each Loan for each Interest Period is the percentage rate per annum which 
+is the equal to the Interest Rate.  
+8.2 Capitalisation of payment of interest 
+(a) Interest shall be automatically capitalised and shall be added to the outstanding principal amount 
+of each Loan o n the last day of the  first Interest Period , and following the first Interest Period , on 
+the last day of each Interest Period.  
+(b) After capitalisation, interest shall:  
+(i) be treated as part of the principal amount of each Loan;  
+(ii) accrue in accordance with this Clause 8; and  
+(iii) be subject to the repayment and prepayment provisions of this Agreement.  
+9. INTEREST PERIODS 
+9.1 Selection of Interest Periods 
+(a) The Borrower may select an Interest Period for a Loan in the Utilisation Request for that Loan or (if 
+the Loan has already been borrowed) in a Selection Notice.  
+(b) Each Selection Notice for a Loan is irrevocable and must be delivered to the Lender by the Borrower 
+not later than 10:00 a.m. on the Business Day before the first day of the relevant Interest Period.  
+(c) If the Borrower fails to deliver a Selection Notice to the Lender in accordance with paragraph (b) 
+above, the relevant Interest Period will be one Month.  
+(d) Subject to this Clause 9, the Borrower may select an Interest Period of three or six Months or of any 
+other period agreed between the Borrower and the Lender in relation to the relevant Loan.  
+(e) An Interest Period for a Loan shall not extend beyond the Termination Date.  
+(f) Each Interest Period for a Loan shall start on the Utilisation Date or (if already made) on the last 
+day of its preceding Interest Period.  
+9.2 Non-Business Days 
+If an Interest Period would otherwise end on a day which is not a Business Day, that Interest Period 
+will instead end on the next Business Day in that calendar month (if there is one) or the preceding 
+Business Day (if there is not).  
+9.3 Consolidation and division of Loans 
+(a) Subject to paragraph (b) below, if two or more Interest Periods:  
+(i) relate to multiple Loans; and  
+(ii) end on the same date,  
+
+===== PAGE 15 =====
+12 
+ 
+those Loans will, unless the Borrower specifies to the contrary in the Selection Notice for the next 
+Interest Period, be consolidated into, and treated as, a single Loan on the last day of the Interest 
+Period. 
+(b) Subject to Clause 4.3 (Maximum number of Loans ) and Clause 5.3 (Currency and amount ), if the 
+Borrower requests in a Selection Notice that a Loan be divided into two or more Loans, that Loan 
+will, on the last day of its Interest Period, be so divided with Base Currency Amounts specified in 
+that Selection Notice, being an aggregate Base Currency Amount equal to the Base Currency 
+Amount of the Loan immediately before its division.  
+
+===== PAGE 16 =====
+13 
+ 
+SECTION 6 
+ADDITIONAL PAYMENT OBLIGATIONS 
+10. COSTS AND EXPENSES  
+10.1 Transaction expenses 
+The Borrower shall promptly on demand pay the Lender the amount of all costs and expenses 
+(including legal fees) reasonably incurred by it in connection with the negotiation, preparation, 
+printing and execution of this Agreement and any other documents referred to in this Agreement.  
+10.2 Amendment costs 
+If the Borrower requests an amendment, waiver or consent the Borrower shall, within three Business 
+Days of demand, reimburse the Lender for the amount of all costs and expenses (including legal 
+fees) reasonably incurred by the Lender in responding to, evaluating, negotiating or complying with 
+that request or requirement.  
+10.3 Enforcement costs 
+The Borrower shall, within three Business Days of demand, pay to the Lender the amount of all 
+costs and expenses (including legal fees) incurred by the Lender in connection with the enforcement 
+of, or the preservation of any rights under, this Agreement.
+
+===== PAGE 17 =====
+  
+  
+ 
+14 
+ 
+SECTION 7 
+REPRESENTATIONS, UNDERTAKINGS AND EVENTS OF DEFAULT 
+11. REPRESENTATIONS 
+The Borrower makes the representations and warranties set out in this Clause 11 to the Lender on 
+the date of this Agreement.  
+11.1 Status 
+(a) It is a corporation, duly incorporated and validly existing under the law of its jurisdiction of 
+incorporation.  
+(b) It and each of its Subsidiaries has the power to own its assets and carry on its business as it is 
+being conducted.  
+11.2 Binding obligations 
+The obligations expressed to be assumed by it in this Agreement are, subject to any general 
+principles of law limiting its obligations which are specifically referred to in any legal opinion 
+delivered pursuant to Clause 4 ( Conditions of Utilisation ), legal, valid, binding and enforceable 
+obligations. 
+11.3 Non-conflict with other obligations 
+The entry into and performance by it of, and the transactions contemplated by, this Agreement do 
+not and will not conflict with:  
+(a) any law or regulation applicable to it;  
+(b) its or any of its Subsidiaries' constitutional documents; or  
+(c) any agreement or instrument binding upon it or any of its Subsidiaries or any of its or any 
+of its Subsidiaries' assets.  
+11.4 Power and authority 
+It has the power to enter into, perform and deliver, and has taken all necessary action to authorise 
+its entry into, performance and delivery of, this Agreement.  
+11.5 Validity and admissibility in evidence 
+All Authorisations required or desirable:  
+(a) to enable it lawfully to enter into, exercise its rights and comply with its obligations in this 
+Agreement to which it is a party; and  
+(b) to make this Agreement to which it is a party admissible in evidence in its jurisdiction of 
+incorporation,  
+have been obtained or effected and are in full force and effect.  
+11.6 Governing law and enforcement 
+(a) The choice of English law as the governing law of this Agreement will be recognised and enforced 
+in its jurisdiction of incorporation.  
+(b) Any judgment obtained in England in relation to this Agreement will be recognised and enforced in 
+its jurisdiction of incorporation.  
+
+===== PAGE 18 =====
+15 
+ 
+11.7 No filing or stamp taxes 
+Under the law of its jurisdiction of incorporation it is not necessary that this Agreement be filed, 
+recorded or enrolled with any court or other authority in that jurisdiction or that any stamp, 
+registration or similar tax be paid on or in relation to this Agreement or the transactions contemplated 
+by this Agreement.  
+11.8 Insolvency 
+No corporate action, legal proceeding or other procedure or step in each case described in Clause 
+14.6 has been taken or, to the knowledge of the Borrower, threatened in relation to it or any of its 
+Subsidiaries, and none of the circumstances described in Clause 14.5 applies to it or any of its 
+Subsidiaries. 
+11.9 No default 
+No Event of Default is continuing or might reasonably be expected to result from the making of any 
+Utilisation. 
+11.10 No misleading information 
+(a) Any factual information provided by or on behalf of any member of the Group in relation to this 
+Agreement was true and accurate in all material respects as at the date it was provided or as at the 
+date (if any) at which it is stated.  
+(b) Nothing has occurred or been omitted from the factual information referred to in paragraph (a) above 
+and no information has been given or withheld that results in that information being untrue or 
+misleading in any material respect.  
+11.11 Pari passu ranking 
+Its payment obligations under this Agreement rank at least pari passu with the claims of all its other 
+unsecured and unsubordinated creditors, except for obligations mandatorily preferred by law 
+applying to companies generally.  
+11.12 No proceedings 
+(a) No litigation, arbitration or administrative proceedings of or before any court, arbitral body or agency 
+which, if adversely determined, might reasonably be expected to have a Material Adverse Effect 
+has or have (to the best of its knowledge and belief) been started or threatened against it or any of 
+its Subsidiaries.  
+(b) No judgment or order of a court, arbitral body or agency which might reasonably be expected to 
+have a Material Adverse Effect has (to the best of its knowledge and belief) been made against it or 
+any of its Subsidiaries.  
+11.13 Repetition 
+The Repeating Representations are deemed to be made by the Borrower by reference to the facts 
+and circumstances then existing on the date of each Utilisation Request and the first day of each 
+Interest Period.  
+11.14 No breach of laws 
+It has not (and none of its Subsidiaries has) breached any law or regulation which breach has or is 
+reasonably likely to have a Material Adverse Effect  
+
+===== PAGE 19 =====
+16 
+ 
+12. INFORMATION UNDERTAKINGS 
+The undertakings in this Clause 12 remain in force from the date of this Agreement for so long as 
+any amount is outstanding under this Agreement or any Commitment is in force.  
+12.1 Information: miscellaneous 
+The Borrower shall supply to the Lender:  
+(a) at the same time as they are dispatched, copies of all documents dispatched by the 
+Borrower or any member of the Group to its creditors generally (or any class of them);  
+(b) promptly upon becoming aware of them, the details of any litigation, arbitration or 
+administrative proceedings which are current, threatened or pending against any member 
+of the Group and which, if adversely determined, are reasonably likely to have a Material 
+Adverse Effect;  
+(c) promptly upon becoming aware of them, the details of any judgment or order of a court, 
+arbitral body or agency which is made against any member of the Group and which is 
+reasonably likely to have a Material Adverse Effect; and  
+(d) promptly on request, such further information regarding the financial condition, assets and 
+operations of the Group as the Lender may reasonably request.  
+12.2 Notification of default  
+(a) The Borrower shall notify the Lender of any Default (and the steps, if any, being taken to 
+remedy it) promptly upon becoming aware of its occurrence.  
+(b) Promptly upon a request by the Lender, the Borrower shall supply to the Lender a certificate 
+signed by two of its directors or senior officers on its behalf certifying that no Default is 
+continuing (or if a Default is continuing, specifying the Default and the steps, if any, being 
+taken to remedy it.  
+13. GENERAL UNDERTAKINGS 
+The undertakings in this Clause 12 remain in force from the date of this Agreement for so long as 
+any amount is outstanding under this Agreement or any Commitment is in force.  
+13.1 Authorisations 
+The Borrower shall promptly:  
+(a) obtain, comply with and do all that is necessary to maintain in full force and effect; and  
+(b) supply certified copies to the Lender of,  
+any Authorisation required under any law or regulation of its jurisdiction of incorporation to enable it 
+to perform its obligations under this Agreement and to ensure the legality, validity, enforceability or 
+admissibility in evidence in its jurisdiction of incorporation of this Agreement.  
+13.2 Compliance with laws 
+The Borrower shall comply in all respects with all laws to which it may be subject, if failure so to 
+comply would materially impair its ability to perform its obligations under this Agreement.  
+13.3 Notification of default 
+(a) The Borrower shall notify the Lender of any Default (and the steps, if any, being taken to remedy it) 
+promptly upon becoming aware of its occurrence.  
+
+===== PAGE 20 =====
+17 
+ 
+(b) Promptly upon a request by the Lender, the Company shall supply to the Lender a certificate signed 
+by two of its directors or senior officers on its behalf certifying that no Default is continuing (or if a 
+Default is continuing, specifying the Default and the steps, if any, being taken to remedy it).  
+13.4 Change of business 
+The Borrower shall procure that no material change is made to the general nature of the business 
+of it or the Group (taken as a whole) from that carried on as at the date of this agreement.  
+13.5 Holding company 
+Save for those circumstances which are explicitly excluded from the operation of the definition of 
+Change of Control, the Borrower shall remain the ultimate holding company of the Group.  
+13.6 Negative pledge 
+(a) The Borrower shall not create or permit to subsist any Security over any of its assets.  
+(b) The Borrower shall not:  
+(i) sell, transfer or otherwise dispose of any of its assets on terms whereby they are or may be 
+leased to or re-acquired by the Borrower;  
+(ii) sell, transfer or otherwise dispose of any of its receivables on recourse terms;  
+(iii) enter into any arrangement under which money or the benefit of a bank or other account 
+may be applied, set-off or made subject to a combination of accounts; or  
+(iv) enter into any other preferential arrangement having a similar effect,  
+in circumstances where the arrangement or transaction is entered into primarily as a method of 
+raising Financial Indebtedness or of financing the acquisition of an asset.  
+(c) Paragraphs (a) and (b) above do not apply to any Security listed below:  
+(i) any netting or set-off arrangement entered into by the Borrower in the ordinary course of its 
+banking arrangements for the purpose of netting debit and credit balances;  
+(ii) any payment or close out netting or set-off arrangement pursuant to any hedging transaction 
+entered into by a member of the Borrower for the purpose of:  
+(A) hedging any risk to which any member of the Borrower is exposed in its ordinary 
+course of trading; or  
+(B) its interest rate or currency management operations which are carried out in the 
+ordinary course of business and for non-speculative purposes only,  
+excluding, in each case, any Security under a credit support arrangement in relation to a 
+hedging transaction;  
+(iii) any Security arising in connection with the whole business securitisation under which 
+Dignity (2002) Limited is the borrower and to which the Borrower is party;  
+(iv) any lien arising by operation of law and in the ordinary course of trading;  
+(v) any Security over or affecting any asset acquired by the Borrower after the date of this 
+Agreement if: 
+(A) the Security was not created in contemplation of the acquisition of that asset by the 
+Borrower; 
+
+===== PAGE 21 =====
+18 
+ 
+(B) the principal amount secured has not been increased in contemplation of or since 
+the acquisition of that asset by the Borrower; and  
+(C) the Security is removed or discharged within 12 months of the date of acquisition of 
+such asset;  
+(vi) any Security over or affecting any asset of any company which becomes the Borrower after 
+the date of this Agreement, where the Security is created prior to the date on which that 
+company becomes the Borrower, if:  
+(A) the Security was not created in contemplation of the acquisition of that company;  
+(B) the principal amount secured has not increased in contemplation of or since the 
+acquisition of that company; and  
+(C) the Security is removed or discharged within 12 months of that company becoming 
+the Borrower;  
+(vii) any Security arising under any retention of title, hire purchase or conditional sale 
+arrangement or arrangements having similar effect in respect of goods supplied to the 
+Borrower in the ordinary course of trading and on the supplier's standard or usual terms and 
+not arising as a result of any default or omission by the Borrower; or  
+(viii) any Security securing indebtedness the principal amount of which (when aggregated with 
+the principal amount of any other indebtedness which has the benefit of Security given by 
+the Borrower other than any permitted under paragraphs (i) to (vii) above) does not exceed 
+£5,000,000 (or its equivalent in another currency or currencies).  
+13.7 Financial indebtedness 
+Save for Financial Indebtedness between it and members of the Group, the Borrower shall not incur 
+or allow to remain outstanding any Financial Indebtedness which does not exist as at the date of 
+this Agreement without the prior approval of the Lender (not to be unreasonably withheld).  
+14. EVENTS OF DEFAULT 
+Each of the events or circumstances set out in Clause 14 is an Event of Default (save for Clause 
+14.11 (Acceleration)). 
+14.1 Non-payment 
+The Borrower does not pay on the due date any amount payable pursuant to this Agreement at the 
+place at and in the currency in which it is expressed to be payable unless:  
+(a) its failure to pay is caused by:  
+(i) administrative or technical error; or  
+(ii) a Disruption Event; and  
+(b) payment is made within 15 Business Days of its due date.  
+14.2 Other obligations 
+(a) The Borrower does not comply with any provision of this Agreement (other than those referred to in 
+Clause 14.1 (Non-payment ). 
+
+===== PAGE 22 =====
+19 
+ 
+(b) No Event of Default under paragraph (a) above will occur if the failure to comply is capable of 
+remedy and is remedied within 10 Business Days of the earlier of (A) the Lender giving notice to 
+the Borrower and (B) the Borrower becoming aware of the failure to comply.  
+14.3 Misrepresentation 
+(a) Any representation or statement made or deemed to be made by the Borrower in this Agreement or 
+any other document delivered by or on behalf of the Borrower under or in connection with this 
+Agreement is or proves to have been incorrect or misleading in any material respect when made or 
+deemed to be made.  
+(b) No Event of Default under paragraph 14.2(a) above will occur if the matters leading to such incorrect 
+or misleading representation or statement are capable of remedy and are remedied within 20 
+Business Days of the earlier of (A) the Lender giving notice to the Borrower and (B) the Borrower 
+becoming aware of such circumstances.  
+14.4 Cross default 
+(a) Any Financial Indebtedness of any member of the Group is not paid when due nor within any 
+originally applicable grace period;  
+(b) Any Financial Indebtedness of any member of the Group is declared to be or otherwise becomes 
+due and payable prior to its specified maturity as a result of an event of default (however described);  
+(c) Any commitment for any Financial Indebtedness of any member of the Group is cancelled or 
+suspended by a creditor of any member of the Group as a result of an event of default (however 
+described); 
+(d) Any creditor of any member of the Group becomes entitled to declare any Financial Indebtedness 
+of any member of the Group due and payable prior to its specified maturity as a result of an event 
+of default (however described).  
+No Event of Default will occur under this Clause  14.4 if the aggregate amount of Financial Indebtedness 
+or commitment for Financial Indebtedness falling within paragraphs   to  above is less than £5,000,000 (or 
+its equivalent in any other currency or currencies).  
+14.5 Insolvency 
+(a) A member of the Group:  
+(i) is unable or admits inability to pay its debts as they fall due;  
+(ii) suspends making payments on any of its debts; or  
+(iii) by reason of actual or anticipated financial difficulties, commences negotiations with one or 
+more of its creditors (excluding the Lender in its capacity as such) with a view to 
+rescheduling any of its indebtedness.  
+(b) The value of the assets of the Borrower is less than its liabilities (taking into account contingent and 
+prospective liabilities).  
+(c) A moratorium is declared in respect of any indebtedness of the Borrower.  
+14.6 Insolvency proceedings 
+(a) Any corporate action, legal proceedings or other procedure or step is taken in relation to:  
+
+===== PAGE 23 =====
+20 
+ 
+(i) the suspension of payments, a moratorium of any indebtedness, winding-up, dissolution, 
+administration or reorganisation (by way of voluntary arrangement, scheme of arrangement 
+or otherwise) of any member of the Group other than a solvent liquidation;  
+(ii) a composition, compromise, assignment or arrangement with any creditor of any member 
+of the Group;  
+(iii) the appointment of a liquidator, receiver, administrative receiver, administrator, compulsory 
+manager or other similar officer in respect of any member of the Group or any of its assets; 
+or 
+(iv) enforcement of any Security over any assets of any member of the Group,  
+or any analogous procedure or step is taken in any jurisdiction.  
+(b) This Clause 14.6 shall not apply to any winding-up petition which is frivolous or vexatious and is 
+discharged, stayed or dismissed within 30 days of commencement.   
+14.7 Creditors' process 
+Any expropriation, attachment, sequestration, distress or execution affects any asset or assets of 
+the Borrower and is not discharged within five Business Days.  
+14.8 Unlawfulness 
+It is or becomes unlawful for the Borrower to perform any of its obligations under this Agreement.  
+14.9 Material adverse change 
+Any event of circumstance occurs which in the reasonable opinion of the Lender constitutes a 
+Material Adverse Effect.  
+14.10 Repudiation 
+The Borrower repudiates this Agreement or evidences an intention to repudiate this Agreement.  
+14.11 Acceleration 
+On and at any time after the occurrence of an Event of Default which is continuing the Lender may, 
+by notice to the Borrower:  
+(a) cancel the Available Commitment whereupon the Available Commitment shall immediately 
+be cancelled and the Facility shall immediately cease to be available for further utilisation;  
+(b) declare that all or part of the Loans, together with accrued interest, and all other amounts 
+accrued or outstanding under this Agreement be immediately due and payable, whereupon 
+they shall become immediately due and payable; and/or  
+(c) declare that all or part of the Loans be payable on demand, whereupon they shall 
+immediately become payable on demand by the Lender.  
+ 
+
+===== PAGE 24 =====
+21 
+ 
+SECTION 8 
+CHANGES TO PARTIES 
+15. CHANGES TO THE LENDER 
+15.1 Assignments and transfers by the Lender 
+Subject to this Clause 15, the Lender (the " Existing Lender") may: 
+(a) assign any of its rights; or  
+(b) transfer by novation any of its rights and obligations,  
+to another bank or financial institution or to a trust, fund or other entity which is regularly engaged 
+in or established for the purpose of making, purchasing or investing in loans, securities or other 
+financial assets (the " New Lender"). 
+15.2 Borrower consent 
+The consent of the Borrower (not to be unreasonably withheld) is required for an assignment or 
+transfer by the Existing Lender, unless such assignment or transfer is made at a time when an Event 
+of Default is continuing.  
+15.3 Security 
+The Lender may not charge, assign or otherwise create Security in or over (whether by way of 
+collateral or otherwise) any of its rights under this Agreement.  
+16. CHANGES TO THE BORROWER 
+The Borrower may not assign any of its rights or transfer any of its rights or obligations under this 
+Agreement. 
+
+===== PAGE 25 =====
+22 
+ 
+SECTION 9 
+THE LENDER 
+17. CONDUCT OF BUSINESS BY THE LENDER 
+(a) No provision of this Agreement will:  
+(i) interfere with the right of the Lender to arrange its affairs (tax or otherwise) in whatever 
+manner it thinks fit;  
+(ii) oblige the Lender to investigate or claim any credit, relief, remission or repayment available 
+to it or the extent, order and manner of any claim; or  
+(iii) oblige the Lender to disclose any information relating to its affairs (tax or otherwise) or any 
+computations in respect of Tax.  
+(b) The Lender may engage and pay for the advice or services of any lawyers, accountants, tax 
+advisers, surveyors or other professional advisers or experts.  
+
+===== PAGE 26 =====
+23 
+ 
+SECTION 10 
+ADMINISTRATION 
+18. PAYMENT MECHANICS 
+18.1 Payments to the Lender 
+(a) On each date on which the Borrower is required to make a payment under this Agreement, it shall 
+make the same available to the Lender for value on the due date at the time and in such funds 
+specified by the Lender as being customary at the time for settlement of transactions in the relevant 
+currency in the place of payment.  
+(b) Payment shall be made to such account in the principal financial centre of the country of that 
+currency and with such bank as the Lender, in each case, may notify to the Borrower by not less 
+than five Business Days' notice.  
+18.2 Payments by the Lender 
+(a) On each date on which the Lender is required to make a payment under this Agreement, the Lender 
+shall make the same available to the Borrower for value on the due date at the time and in such 
+funds specified by the Lender as being customary at the time for settlement of transactions in the 
+relevant currency in the place of payment.  
+(b) Payment shall be made to such account in the principal financial centre of the country of that 
+currency and with such bank as the Borrower, in each case, may notify to the Lender in the relevant 
+Utilisation Request or Selection Notice.  
+18.3 Distributions to the Borrower 
+The Lender may (with the consent of the Borrower or in accordance with Clause 19 (Set-off)) apply 
+any amount payable by it to the Borrower in or towards payment (on the date and in the currency 
+and funds of receipt) of any amount due from the Borrower under this Agreement.  
+18.4 Partial payments 
+(a) If the Lender receives a payment that is insufficient to discharge all the amounts then due and 
+payable by the Borrower under this Agreement, the Lender shall apply that payment towards the 
+obligations of the Borrower under this Agreement in any order selected by the Lender.  
+(b) Paragraph (a) above will override any appropriation made by the Borrower.  
+18.5 No set-off by the Borrower 
+All payments to be made by the Borrower under this Agreement shall be calculated and be made 
+without (and free and clear of any deduction for) set-off or counterclaim.  
+18.6 Business Days 
+(a) Any payment under this Agreement which is due to be made on a day that is not a Business Day 
+shall be made on the next Business Day in the same calendar month (if there is one) or the 
+preceding Business Day (if there is not).  
+(b) During any extension of the due date for payment of any principal or an Unpaid Sum under this 
+Agreement interest is payable on the principal or Unpaid Sum at the rate payable on the original 
+due date. 
+
+===== PAGE 27 =====
+24 
+ 
+18.7 Currency of account 
+(a) Subject to paragraphs (b) to (d) below, the Base Currency is the currency of account and payment 
+for any sum due from the Borrower under this Agreement.  
+(b) A repayment of a Loan or Unpaid Sum or a part of a Loan or Unpaid Sum shall be made in the 
+currency in which that Loan or Unpaid Sum is denominated, pursuant to this Agreement, on its due 
+date. 
+(c) Each payment of interest shall be made in the currency in which the sum in respect of which the 
+interest is payable was denominated, pursuant to this Agreement, when that interest accrued.  
+(d) Any amount expressed to be payable in a currency other than the Base Currency shall be paid in 
+that other currency. 
+18.8 Disruption to payment systems etc. 
+If either the Lender determines (in its discretion) that a Disruption Event has occurred or the Lender 
+is notified by the Company that a Disruption Event has occurred:  
+(a) the Lender may, and shall if requested to do so by the Company, consult with the Company 
+with a view to agreeing with the Company such changes to the operation or administration 
+of the Facilities as the Lender may deem necessary in the circumstances;  
+(b) the Lender shall not be obliged to consult with the Company in relation to any changes 
+mentioned in paragraph (a) if, in its opinion, it is not practicable to do so in the circumstances 
+and, in any event, shall have no obligation to agree to such changes;  
+(c) any such changes agreed upon by the Lender and the Company shall (whether or not it is 
+finally determined that a Disruption Event has occurred) be binding upon the Parties as an 
+amendment to (or, as the case may be, waiver of) the terms of this Agreement 
+notwithstanding the provisions of Clause 25 (Amendments and Waivers ); and 
+(d) the Lender shall not be liable for any damages, costs or losses to any person, any diminution 
+in value or any liability whatsoever (including, without limitation for negligence, gross 
+negligence or any other category of liability whatsoever but not including any claim based 
+on the fraud of the Lender) arising as a result of its taking, or failing to take, any actions 
+pursuant to or in connection with this Clause 18.8. 
+19. SET-OFF 
+The Lender may set off any matured obligation due from the Borrower under this Agreement (to the 
+extent beneficially owned by the Lender) against any matured obligation owed by the Lender to the 
+Borrower, regardless of the place of payment, booking branch or currency of either obligation. If the 
+obligations are in different currencies, the Lender may convert either obligation at a market rate of 
+exchange in its usual course of business for the purpose of the set-off.  
+20. NOTICES 
+20.1 Communications in writing 
+Any communication to be made under or in connection with this Agreement shall be made in writing 
+and, unless otherwise stated, may be made by fax or letter.  
+
+===== PAGE 28 =====
+25 
+ 
+20.2 Addresses 
+The address and fax number (and the department or officer, if any, for whose attention the 
+communication is to be made) of each Party for any communication or document to be made or 
+delivered under or in connection with this Agreement is that identified with its name below, or any 
+substitute address or fax number or department or officer as the Party may notify to the other Parties 
+by not less than five Business Days' notice.  
+20.3 Delivery 
+(a) Any communication or document made or delivered by the Lender to another Party under or in 
+connection with this Agreement will only be effective:  
+(i) if by way of fax, when received in legible form; or  
+(ii) if by way of letter, when it has been left at the relevant address or five Business Days after 
+being deposited in the post postage prepaid in an envelope addressed to it at that address,  
+and, if a particular department or officer is specified as part of its address details provided under 
+Clause 20.2 (Addresses), if addressed to that department or officer.  
+(b) Any communication or document to be made or delivered to the Lender will be effective only when 
+actually received by the Lender and then only if it is expressly marked for the attention of the 
+department or officer identified with the Lender's signature below (or any substitute department or 
+officer as the Lender shall specify for this purpose).  
+(c) Any communication or document made or delivered to the Company in accordance with this Clause 
+will be deemed to have been made or delivered to the Borrower.  
+(d) Any communication or document which becomes effective, in accordance with paragraphs (a) to (c) 
+above, after 5.00 p.m. in the place of receipt shall be deemed only to become effective on the 
+following day. 
+20.4 Electronic communication 
+(a) Any communication or document to be made or delivered by one Party to another under or in 
+connection with this Agreement may be made or delivered by electronic mail or other electronic 
+means (including, without limitation, by way of posting to a secure website) if those two Parties:  
+(i) notify each other in writing of their electronic mail address and/or any other information 
+required to enable the transmission of information by that means; and  
+(ii) notify each other of any change to their address or any other such information supplied by 
+them by not less than five Business Days' notice.  
+(b) Any such electronic communication or delivery as specified in paragraph (a) above to be made 
+between the Borrower and the Lender may only be made in that way to the extent that those two 
+Parties agree that, unless and until notified to the contrary, this is to be an accepted form of 
+communication or delivery.  
+(c) Any such electronic communication or document as specified in paragraph (a) above made or 
+delivered by one Party to another will be effective only when actually received (or made available) 
+in readable form and in the case of any electronic communication or document made or delivered 
+by a Party to the Lender only if it is addressed in such a manner as the Lender shall specify for this 
+purpose. 
+
+===== PAGE 29 =====
+26 
+ 
+(d) Any electronic communication or document which becomes effective, in accordance with paragraph 
+(c) above, after 5:00 p.m. in the place in which the Party to whom the relevant communication or 
+document is sent or made available has its address for the purpose of this Agreement shall be 
+deemed only to become effective on the following day.  
+(e) Any reference in this Agreement to a communication being sent or received or a document being 
+delivered shall be construed to include that communication or document being made available in 
+accordance with this Clause 20.4. 
+20.5 English language 
+(a) Any notice given under or in connection with this Agreement must be in English.  
+(b) All other documents provided under or in connection with this Agreement must be:  
+(i) in English; or  
+(ii) if not in English, and if so required by the Lender, accompanied by a certified English 
+translation and, in this case, the English translation will prevail unless the document is a 
+constitutional, statutory or other official document.  
+21. CALCULATIONS AND CERTIFICATES 
+21.1 Accounts 
+In any litigation or arbitration proceedings arising out of or in connection with this Agreement, the 
+entries made in the accounts maintained by the Lender are prima facie evidence of the matters to 
+which they relate.  
+21.2 Certificates and determinations 
+Any certification or determination by the Lender of a rate or amount under this Agreement is, in the 
+absence of manifest error, conclusive evidence of the matters to which it relates.  
+21.3 Day count convention 
+Any interest, commission or fee accruing under this Agreement will accrue from day to day and is 
+calculated on the basis of the actual number of days elapsed and a year of 360 days or, in any case 
+where the practice in the Relevant Market differs, in accordance with that market practice.  
+22. INDEMNITY 
+The Borrower shall, within three Business Days of demand, indemnify the Lender against any cost, 
+loss or liability incurred by it as a result of:  
+(a) the occurrence of any Event of Default;  
+(b) a failure by the Borrower to pay any amount due under this Agreement on its due date;  
+(c) funding, or making arrangements to fund a Utilisation requested by the Borrower in a Utilisation 
+Request but not made by reason of the operation of any one or more of the provisions of this 
+Agreement (other than by reason of default or negligence by the Lender); or  
+(d) a Utilisation (or part of a Utilisation) not being prepaid in accordance with a notice of prepayment 
+given by a Borrower.  
+23. PARTIAL INVALIDITY 
+If, at any time, any provision of this Agreement is or becomes illegal, invalid or unenforceable in any 
+respect under any law of any jurisdiction, neither the legality, validity or enforceability of the 
+
+===== PAGE 30 =====
+27 
+ 
+remaining provisions nor the legality, validity or enforceability of such provision under the law of any 
+other jurisdiction will in any way be affected or impaired.  
+24. REMEDIES AND WAIVERS 
+No failure to exercise, nor any delay in exercising, on the part of the Lender, any right or remedy 
+under this Agreement shall operate as a waiver of any such right or remedy or constitute an election 
+to affirm this Agreement. No waiver or election to affirm this Agreement on the part of the Lender 
+shall be effective unless in writing. No single or partial exercise of any right or remedy shall prevent 
+any further or other exercise or the exercise of any other right or remedy. The rights and remedies 
+provided in this Agreement are cumulative and not exclusive of any rights or remedies provided by 
+law. 
+25. AMENDMENTS AND WAIVERS 
+No term of any of this Agreement may be amended or waived without the prior consent of the Lender 
+and the Borrower and any such amendment or waiver will be binding on all Parties.  
+26. CONFIDENTIAL INFORMATION 
+26.1 Confidentiality 
+The Lender agrees to keep all Confidential Information confidential and not to disclose it to anyone, 
+save to the extent permitted by Clause 26.2 (Disclosure of Confidential Information ), and to ensure 
+that all Confidential Information is protected with security measures and a degree of care that would 
+apply to its own confidential information.  
+26.2 Disclosure of Confidential Information 
+The Lender may disclose:  
+(a) to any of its Affiliates and Related Funds and any of its or their officers, directors, employees, 
+professional advisers, auditors, partners and Representatives such Confidential Information 
+as the Lender shall consider appropriate if any person to whom the Confidential Information 
+is to be given pursuant to this paragraph (a) is informed in writing of its confidential nature 
+and that some or all of such Confidential Information may be price-sensitive information 
+except that there shall be no such requirement to so inform if the recipient is subject to 
+professional obligations to maintain the confidentiality of the information or is otherwise 
+bound by requirements of confidentiality in relation to the Confidential Information;  
+(b) to any person:  
+(i) to (or through) whom it assigns or transfers (or may potentially assign or transfer) all 
+or any of its rights and/or obligations under this Agreement and to any of that 
+person's Affiliates, Related Funds, Representatives and professional advisers;  
+(ii) with (or through) whom it enters into (or may potentially enter into), whether directly 
+or indirectly, any sub-participation in relation to, or any other transaction under which 
+payments are to be made or may be made by reference to, this Agreement and/or 
+the Borrower and to any of its Affiliates, Related Funds, Representatives and 
+professional advisers;  
+
+===== PAGE 31 =====
+28 
+ 
+(iii) appointed by the Lender or by a person to whom paragraph (b)(i) or (ii) above applies 
+to receive communications, notices, information or documents delivered pursuant to 
+this Agreement on its behalf;  
+(iv) who invests in or otherwise finances (or may potentially invest in or otherwise 
+finance), directly or indirectly, any transaction referred to in paragraph (b)(i) or (b)(ii) 
+above; 
+(v) to whom information is required or requested to be disclosed by any court of 
+competent jurisdiction or any governmental, banking, taxation or other regulatory 
+authority or similar body, the rules of any relevant stock exchange or pursuant to any 
+applicable law or regulation;  
+(vi) to whom information is required to be disclosed in connection with, and for the 
+purposes of, any litigation, arbitration, administrative or other investigations, 
+proceedings or disputes;  
+(vii) who is a Party; or  
+(viii) with the consent of the Borrower;  
+in each case, such Confidential Information as the Lender shall consider appropriate if:  
+(A) in relation to paragraphs (b)(i), (b)(ii) and (b)(iii) above, the person to whom 
+the Confidential Information is to be given has entered into a Confidentiality 
+Undertaking except that there shall be no requirement for a Confidentiality 
+Undertaking if the recipient is a professional adviser and is subject to 
+professional obligations to maintain the confidentiality of the Confidential 
+Information; 
+(B) in relation to paragraph (b)(iv) above, the person to whom the Confidential 
+Information is to be given has entered into a Confidentiality Undertaking or 
+is otherwise bound by requirements of confidentiality in relation to the 
+Confidential Information they receive and is informed that some or all of such 
+Confidential Information may be price-sensitive information;  
+(C) in relation to paragraphs (b)(v), (b)(vi) and (b)(vii) above, the person to whom 
+the Confidential Information is to be given is informed of its confidential 
+nature and that some or all of such Confidential Information may be price-
+sensitive information except that there shall be no requirement to so inform 
+if, in the opinion of the Lender, it is not practicable so to do in the 
+circumstances;  
+(c) to any person appointed by the Lender or by a person to whom paragraph (b)(i) or (b)(ii) 
+above applies to provide administration or settlement services in respect of one or more of 
+this Agreement, such Confidential Information as may be required to be disclosed to enable 
+such service provider to provide any of the services referred to in this paragraph (c) if the 
+service provider to whom the Confidential Information is to be given has entered into a 
+confidentiality agreement substantially in the form of the LMA Master Confidentiality 
+Undertaking for Use With Administration/Settlement Service Providers or such other form 
+of confidentiality undertaking agreed between the Borrower and the Lender; and  
+
+===== PAGE 32 =====
+29 
+ 
+(d) to any rating agency (including its professional advisers) such Confidential Information as 
+may be required to be disclosed to enable such rating agency to carry out its normal rating 
+activities in relation to this Agreement and/or the Borrower if the rating agency to whom the 
+Confidential Information is to be given is informed of its confidential nature and that some 
+or all of such Confidential Information may be price-sensitive information.  
+26.3 Entire agreement 
+This Clause 26 constitutes the entire agreement between the Parties in relation to the obligations 
+of the Lender under this Agreement regarding Confidential Information and supersedes any 
+previous agreement, whether express or implied, regarding Confidential Information.  
+26.4 Inside information 
+The Lender acknowledges that some or all of the Confidential Information is or may be price-
+sensitive information and that the use of such information may be regulated or prohibited by 
+applicable legislation including securities law relating to insider dealing and market abuse and the 
+Lender undertakes not to use any Confidential Information for any unlawful purpose.  
+26.5 Notification of disclosure 
+The Lender agrees (to the extent permitted by law and regulation) to inform the Company:  
+(a) of the circumstances of any disclosure of Confidential Information made pursuant to 
+paragraph (b)(v) of Clause 26.2 (Disclosure of Confidential Information ) except where such 
+disclosure is made to any of the persons referred to in that paragraph during the ordinary 
+course of its supervisory or regulatory function; and  
+(b) upon becoming aware that Confidential Information has been disclosed in breach of this 
+Clause 26. 
+26.6 Continuing obligations 
+The obligations in this Clause 26 are continuing and, in particular, shall survive and remain binding 
+on the Lender for a period of twelve months from the earlier of:  
+(a) the date on which all amounts payable by the Borrower under or in connection with this 
+Agreement have been paid in full and all Commitments have been cancelled or otherwise 
+cease to be available; and  
+(b) the date on which the Lender otherwise ceases to be the Lender.  
+27. COUNTERPARTS 
+This Agreement may be executed in any number of counterparts, and this has the same effect as if 
+the signatures on the counterparts were on a single copy of this Agreement.  
+
+===== PAGE 33 =====
+30 
+ 
+SECTION 11 
+GOVERNING LAW AND ENFORCEMENT 
+28. GOVERNING LAW 
+This Agreement and any non-contractual obligations arising out of or in connection with it are 
+governed by English law.  
+29. ENFORCEMENT 
+29.1 Jurisdiction  
+(a) The courts of England have exclusive jurisdiction to settle any dispute arising out of or in connection 
+with this Agreement (including a dispute relating to the existence, validity or termination of this 
+Agreement or any non-contractual obligation arising out of or in connection with this Agreement) (a 
+"Dispute"). 
+(b) The Parties agree that the courts of England are the most appropriate and convenient courts to 
+settle Disputes and accordingly no Party will argue to the contrary.  
+ 
+This Agreement has been entered into on the date stated at the beginning of this Agreement. 
+
+===== PAGE 34 =====
+31 
+ 
+SCHEDULE 1 
+CONDITIONS PRECEDENT  
+ 
+1. Borrower 
+(a) A copy of the constitutional documents of the Borrower.  
+(b) A copy of a resolution of the board of directors of the Borrower:  
+(i) approving the terms of, and the transactions contemplated by, this Agreement and resolving 
+that it execute this Agreement;  
+(ii) authorising a specified person or persons to execute this Agreement; and  
+(iii) authorising a specified person or persons, on its behalf, to sign and/or despatch all 
+documents and notices (including, if relevant, any Utilisation Request and Selection Notice) 
+to be signed and/or despatched by it under or in connection with this Agreement.  
+(c) A specimen of the signature of each person authorised by the resolution referred to in paragraph 
+(b) above. 
+(d) A certificate of the Company (signed by a director) confirming that borrowing or guaranteeing, as 
+appropriate, the Commitment would not cause any borrowing, guaranteeing or similar limit binding 
+on the Borrower to be exceeded.  
+(e) A certificate of an authorised signatory of the Borrower certifying that each copy document relating 
+to it specified in this Schedule 1  is correct, complete and in full force and effect as at a date no 
+earlier than the date of this Agreement.  
+2. Legal opinions 
+A due authorisation and enforceability legal opinion of Linklaters LLP in customary form, legal 
+advisers to the Borrower in England.  
+
+===== PAGE 35 =====
+32 
+ 
+SCHEDULE 2 
+REQUESTS 
+PART I 
+UTILISATION REQUEST 
+ 
+From: [Borrower] 
+To: [Lender] 
+Dated:  
+ 
+[Company] – [                   ] Facility Agreement 
+dated [                   ] (the "Agreement") 
+1. We refer to the Agreement. This is a Utilisation Request. Terms defined in the Agreement have the 
+same meaning in this Utilisation Request unless given a different meaning in this Utilisation 
+Request.  
+2. We wish to borrow a Loan on the following terms:  
+Proposed Utilisation Date:  [                   ] (or, if that is not a Business Day, the next 
+Business Day)  
+Currency of Loan:  £ 
+Amount: [                   ] or, if less, the Available Commitment  
+Interest Period:  [                   ] 
+3. We confirm that each condition specified in Clause 4.2 ( Further conditions precedent ) of the 
+Agreement is satisfied on the date of this Utilisation Request.  
+4. The proceeds of this Loan should be credited to [ account]. 
+5. This Utilisation Request is irrevocable.  
+ 
+Yours faithfully 
+ 
+ 
+…………………………………  
+authorised signatory for  
+[name of the Borrower ] 
+
+===== PAGE 36 =====
+33 
+ 
+PART II 
+SELECTION NOTICE 
+ 
+From: [Borrower] 
+To: [Lender] 
+Dated: 
+ 
+[Company] – [                   ] Facility Agreement 
+dated [                   ] (the "Agreement") 
+1. We refer to the Agreement. This is a Selection Notice. Terms defined in the Agreement have the 
+same meaning in this Selection Notice unless given a different meaning in this Selection Notice.  
+2. We refer to the following Loan[s] in [identify currency] with an Interest Period ending on 
+[                   ].* 
+3. [We request that the above Loan[s] be divided into [                    ] Loans with the following Base 
+Currency Amounts and Interest Periods:] ** 
+or 
+[We request that the next Interest Period for the above Loan[s] is [                    ]].*** 
+4. We request that the above Loan[s] [is]/[are] [denominated in the same currency for the next Interest 
+Period]/[denominated in the following currencies: [                                  ]. As this results in a change 
+of currency we confirm that each condition specified in Clause 4.2 (Further conditions precedent ) of 
+the Agreement is satisfied on the date of this Selection Notice. The proceeds of any change in 
+currency should be credited to [account]].  
+5. This Selection Notice is irrevocable.  
+ 
+Yours faithfully 
+ 
+…………………………………  
+authorised signatory for  
+[name of the Borrower ]
+ 
+    
+ 
+*  Insert details of all Loans in the same currency which have an Interest Period ending on the same date. 
+**  Use this option if division of Loans is requested. 
+***  Use this option if sub-division is not required. 
+
+===== PAGE 37 =====
+SHAREHOLDER LOAN FACILITY AGREEMENT – SIGNATURE PAGE
+The Borrower
+Address:
+Fax No:
+Attention:
+By:
+The Lender
+Address:
+Fax No:
+Attention:
+By:
+Dignity plc 4 King Edwards Court King Edwards Square Sutton Coldfield
+
+===== PAGE 38 =====
